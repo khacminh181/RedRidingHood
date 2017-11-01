@@ -19,6 +19,8 @@ public class Player extends GameObject implements PhysicsBody {
 
     boolean facingRight;
 
+    public static int HP = 5;
+
 
     public Player() {
         super();

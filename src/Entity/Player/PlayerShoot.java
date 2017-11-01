@@ -7,7 +7,7 @@ public class PlayerShoot {
     boolean spellDisabled = false;
     final int COOL_DOWN_TIME = 10;
     int coolDownCount;
-    public int bulletCounter = 0;
+    public static int bulletCounter = 0;
 
 
     public void run (Player owner, PlayerCastSpell playerCastSpell) {
@@ -30,7 +30,9 @@ public class PlayerShoot {
                 bulletCounter = 0;
                 playerCastSpell.isCast = false;
             }
-            bulletCounter++;
+            if (bulletCounter < 20) {
+                bulletCounter ++;
+            }
 
             System.out.println(bulletCounter);
         }

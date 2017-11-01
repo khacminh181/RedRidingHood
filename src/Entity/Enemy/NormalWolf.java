@@ -38,6 +38,8 @@ public class NormalWolf extends GameObject implements PhysicsBody {
         velocity.y += GRAVITY;
         move();
         updateVerticalPhysics();
+
+
         updateHorizontalPhysics();
 
     }
@@ -83,5 +85,7 @@ public class NormalWolf extends GameObject implements PhysicsBody {
             isActive = false;
         }
     }
+
+
 
 }

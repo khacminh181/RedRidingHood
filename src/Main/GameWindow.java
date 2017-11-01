@@ -57,7 +57,7 @@ public class GameWindow extends JFrame {
 
     private void addHUD() {
         heart = new HP();
-        heart.position.set(200, 200);
+        //heart.position.set(200, 200);
         GameObject.add(heart);
 
     }
