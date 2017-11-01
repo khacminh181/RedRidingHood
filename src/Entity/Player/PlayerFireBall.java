@@ -14,6 +14,7 @@ public class PlayerFireBall extends GameObject{
     public boolean facingRight;
 
     public PlayerFireBall() {
+        super();
         this.renderer = new ImageRenderer("assets/images/Player/Fireball.png");
         boxCollider = new BoxCollider(16 ,16);
         this.children.add(this.boxCollider);

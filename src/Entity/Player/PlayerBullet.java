@@ -1,5 +1,6 @@
 package Entity.Player;
 
+import Entity.Enemy.NormalWolf;
 import Entity.Platform.Platform;
 import bases.GameObject;
 import bases.Vector2D;
@@ -16,6 +17,7 @@ public class PlayerBullet extends GameObject {
 
 
     public PlayerBullet() {
+        super();
         this.renderer = new ImageRenderer("assets/images/Player/Bullet.png");
         boxCollider = new BoxCollider(16 ,16);
         this.children.add(this.boxCollider);
@@ -36,12 +38,12 @@ public class PlayerBullet extends GameObject {
         //System.out.println(facingRight);
         boxCollider.position.set(this.position);
 
-//        Enemy enemy = GameObject.collideWith(this.boxCollieder, Enemy.class);
-//        if (enemy != null) {
-//            System.out.println("Hit");
-//            //enemy.getHit();
-//            this.isActive = false;
-//        }
+        NormalWolf enemy = Physics.collideWith(this.boxCollider, NormalWolf.class);
+        if (enemy != null) {
+            System.out.println("Hit");
+            enemy.getHit();
+            this.isActive = false;
+        }
         hitPlatformer();
     }
 

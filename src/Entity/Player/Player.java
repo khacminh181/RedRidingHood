@@ -6,9 +6,10 @@ import bases.Vector2D;
 import bases.inputs.InputManager;
 import bases.physics.BoxCollider;
 import bases.physics.Physics;
+import bases.physics.PhysicsBody;
 import bases.renderers.ImageRenderer;
 
-public class Player extends GameObject {
+public class Player extends GameObject implements PhysicsBody {
     private Vector2D velocity;
     private final float GRAVITY = 0.4f;
     private BoxCollider boxCollider;
@@ -92,6 +93,7 @@ public class Player extends GameObject {
         }
         else velocity.y += GRAVITY;
 
+
     }
     private void updateHorizontalPhysics() {
         Vector2D checkPosition = screenPosition.add(velocity.x, 0);
@@ -123,5 +125,10 @@ public class Player extends GameObject {
 
         this.position.y += velocity.y;
         this.screenPosition.y += velocity.y;
+    }
+
+    @Override
+    public BoxCollider getBoxCollider() {
+        return boxCollider;
     }
 }

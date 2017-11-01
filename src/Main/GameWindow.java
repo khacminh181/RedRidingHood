@@ -1,5 +1,6 @@
 package Main;
 
+import Entity.Enemy.NormalWolf;
 import Entity.Platform.Platform;
 import Entity.Player.Player;
 import Entity.Player.ViewPort;
@@ -28,6 +29,7 @@ public class GameWindow extends JFrame {
     InputManager inputManager = InputManager.instance;
 
     Player player;
+    NormalWolf normalWolf;
     Background background;
 
     public final int GAMEPLAY_WIDTH = 800;
@@ -42,14 +44,18 @@ public class GameWindow extends JFrame {
         this.setVisible(true);
 
         addBackGround();
-
-
-
         addPlayer();
         addPlatforms();
+        addNormalWolf();
 
 //        setupStartupScene();
 
+    }
+
+    private void addNormalWolf() {
+        normalWolf = new NormalWolf();
+        normalWolf.position.set(500, 50);
+        GameObject.add(normalWolf);
     }
 
     private void addBackGround() {
