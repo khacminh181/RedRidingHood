@@ -35,7 +35,6 @@ public class GameWindow extends JFrame {
 
 
     public GameWindow() {
-        //pack();
         setupWindow();
         setupBackBuffer();
         setupInputs();
@@ -160,8 +159,6 @@ public class GameWindow extends JFrame {
     }
 
     private void render() {
-//        backBufferGraphics2D.setColor(Color.BLACK);
-//        backBufferGraphics2D.(0, 0, this.getWidth(), this.getHeight());
 
         GameObject.renderAll(backBufferGraphics2D, viewPort);
 
