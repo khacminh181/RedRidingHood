@@ -6,18 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1113e933-92fe-4ff5-a89b-3855cdfa9718" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Entity/HUD/HP.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/Player.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/PlayerBullet.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/PlayerBullet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/PlayerFireBall.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/PlayerFireBall.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow$1.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow$2.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Tilemap/Background.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Tilemap/Background.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/Map/mapTest.json" afterPath="$PROJECT_DIR$/assets/Map/mapTest.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Enemy/NormalWolf.java" afterPath="$PROJECT_DIR$/src/Entity/Enemy/NormalWolf.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Player/Player.java" afterPath="$PROJECT_DIR$/src/Entity/Player/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/GameWindow.java" afterPath="$PROJECT_DIR$/src/Main/GameWindow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tilemap/Background.java" afterPath="$PROJECT_DIR$/src/Tilemap/Background.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,17 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameWindow.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main/GameWindow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="59" column="35" lean-forward="false" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#setupLevel#0;class#GameWindow#0" expanded="false" />
-                <element signature="method#setupInputs#0;class#GameWindow#0" expanded="false" />
-              </folding>
-            </state>
+      <file leaf-file-name="background1.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/images/Map1/background1.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -88,15 +72,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Background.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Background.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Tilemap/Background.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="35" column="29" lean-forward="false" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-              <folding>
-                <element signature="e#952#953#0" expanded="true" />
-                <element signature="e#1014#1015#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="226">
+              <caret line="40" column="24" lean-forward="false" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -185,7 +166,6 @@
         <option value="$PROJECT_DIR$/src/scenes/SceneManager.java" />
         <option value="$PROJECT_DIR$/assets/Map/mapTest.json" />
         <option value="$PROJECT_DIR$/src/Entity/Platform/Platform.java" />
-        <option value="$PROJECT_DIR$/src/Tilemap/Background.java" />
         <option value="$PROJECT_DIR$/src/Entity/Player/ViewPort.java" />
         <option value="$PROJECT_DIR$/src/Entity/Player/PlayerFireBall.java" />
         <option value="$PROJECT_DIR$/src/Entity/Player/PlayerBullet.java" />
@@ -194,6 +174,7 @@
         <option value="$PROJECT_DIR$/src/Entity/Enemy/checkPlayer.java" />
         <option value="$PROJECT_DIR$/src/Entity/HUD/HP.java" />
         <option value="$PROJECT_DIR$/src/Main/GameWindow.java" />
+        <option value="$PROJECT_DIR$/src/Tilemap/Background.java" />
       </list>
     </option>
   </component>
@@ -241,14 +222,13 @@
               <item name="RRH-minhnk" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="Enemies" type="462c0819:PsiDirectoryNode" />
+              <item name="Map1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RRH-minhnk" type="b2602c69:ProjectViewProjectNode" />
               <item name="RRH-minhnk" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="HUD" type="462c0819:PsiDirectoryNode" />
+              <item name="Map" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RRH-minhnk" type="b2602c69:ProjectViewProjectNode" />
@@ -530,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509546265881</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added normalwolf">
+      <created>1509555327825</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1509555327825</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -734,11 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/images/Map1/background1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Tilemap/Layer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -853,14 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bases/physics/PhysicsBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Enemy/checkPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -877,17 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tilemap/Background.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="35" column="29" lean-forward="false" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-          <folding>
-            <element signature="e#952#953#0" expanded="true" />
-            <element signature="e#1014#1015#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Enemy/NormalWolf.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1224">
@@ -896,6 +859,34 @@
             <element signature="imports" expanded="true" />
             <element signature="e#747#748#0" expanded="true" />
             <element signature="e#781#782#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/HUD/HP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#137#138#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/images/Map1/background1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/GameWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1015">
+          <caret line="66" column="41" lean-forward="true" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setupLevel#0;class#GameWindow#0" expanded="false" />
+            <element signature="method#setupInputs#0;class#GameWindow#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -913,26 +904,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/HUD/HP.java">
+    <entry file="file://$PROJECT_DIR$/src/bases/physics/PhysicsBody.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#137#138#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/GameWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/Tilemap/Background.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="59" column="35" lean-forward="false" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setupLevel#0;class#GameWindow#0" expanded="false" />
-            <element signature="method#setupInputs#0;class#GameWindow#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="226">
+          <caret line="40" column="24" lean-forward="false" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
