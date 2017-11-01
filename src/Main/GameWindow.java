@@ -1,6 +1,7 @@
 package Main;
 
 import Entity.Enemy.NormalWolf;
+import Entity.HUD.HP;
 import Entity.Platform.Platform;
 import Entity.Player.Player;
 import Entity.Player.ViewPort;
@@ -31,6 +32,7 @@ public class GameWindow extends JFrame {
     Player player;
     NormalWolf normalWolf;
     Background background;
+    HP heart ;
 
     public final int GAMEPLAY_WIDTH = 800;
     public final int GAMEPLAY_HEIGHT = 600;
@@ -47,8 +49,16 @@ public class GameWindow extends JFrame {
         addPlayer();
         addPlatforms();
         addNormalWolf();
+        addHUD();
 
 //        setupStartupScene();
+
+    }
+
+    private void addHUD() {
+        heart = new HP();
+        heart.position.set(200, 200);
+        GameObject.add(heart);
 
     }
 
@@ -158,7 +168,6 @@ public class GameWindow extends JFrame {
                 lastTimeUpdate = currentTime;
 
                 run();
-
                 render();
             }
         }

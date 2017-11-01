@@ -110,6 +110,7 @@ public class Player extends GameObject implements PhysicsBody {
 
         this.position.x += velocity.x;
         this.screenPosition.x += velocity.x;
+
     }
 
     private void updateVerticalPhysics() {
@@ -130,5 +131,9 @@ public class Player extends GameObject implements PhysicsBody {
     @Override
     public BoxCollider getBoxCollider() {
         return boxCollider;
+    }
+
+    public void getHit() {
+        isActive = false;
     }
 }

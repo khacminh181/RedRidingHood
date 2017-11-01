@@ -83,4 +83,5 @@ public class NormalWolf extends GameObject implements PhysicsBody {
             isActive = false;
         }
     }
+
 }
