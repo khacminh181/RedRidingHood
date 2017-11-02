@@ -10,7 +10,7 @@ import bases.renderers.ImageRenderer;
 
 public class PlayerBullet extends GameObject {
 
-    final int SPEED = 10;
+    final int SPEED = 18;
     BoxCollider boxCollider;
     public boolean facingRight;
     Vector2D velocity;
@@ -18,6 +18,7 @@ public class PlayerBullet extends GameObject {
 
     Vector2D playerVelocity;
 
+    //Góc ném rìu
     public static int bulletHeight = 300;
 
     public PlayerBullet() {
@@ -31,12 +32,14 @@ public class PlayerBullet extends GameObject {
 
 
     public void run(Vector2D parentPosition) {
+        System.out.println("bullet"+position.y);
         super.run(parentPosition);
         velocity.x = 0;
 
         if (position.y <= bulletHeight) {
             velocity.y += GRAVITY;
         }
+
         System.out.println(bulletHeight);
 
         if (facingRight) {
@@ -62,12 +65,11 @@ public class PlayerBullet extends GameObject {
             velocity.x += SPEED - playerVelocity.x;
 
         }
+
         this.position.x += velocity.x;
         this.screenPosition.x += velocity.x;
-
         this.position.y += velocity.y;
         this.screenPosition.y += velocity.y;
-
 
         boxCollider.position.set(this.position);
 

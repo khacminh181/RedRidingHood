@@ -37,10 +37,14 @@ public class PlayerShoot {
             System.out.println(bulletCounter);
         }
 
+
+        // Điều khiển góc ném rìu
         if (InputManager.instance.upPressed) {
-            if (PlayerBullet.bulletHeight >= 20) {
+            if (PlayerBullet.bulletHeight >= 0) {
                 PlayerBullet.bulletHeight -= 20;
+
             }
+
         }
 
         if (InputManager.instance.downPressed) {

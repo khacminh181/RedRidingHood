@@ -38,6 +38,8 @@ public class Player extends GameObject implements PhysicsBody {
     public void run(Vector2D parentPosition) {
         super.run(parentPosition);
         updatePhysics();
+
+        System.out.println("player"+position.y);
     }
 
     public Vector2D getVelocity() {
