@@ -9,6 +9,8 @@ import bases.physics.Physics;
 import bases.physics.PhysicsBody;
 import bases.renderers.ImageRenderer;
 
+import static Entity.Platform.Platform.HORNTILE;
+
 public class Player extends GameObject implements PhysicsBody {
     private Vector2D velocity;
     private final float GRAVITY = 0.4f;
@@ -20,6 +22,7 @@ public class Player extends GameObject implements PhysicsBody {
     boolean facingRight;
 
     public static int HP = 5;
+
 
 
     public Player() {
@@ -43,11 +46,11 @@ public class Player extends GameObject implements PhysicsBody {
 
     private void updatePhysics() {
 //        velocity.y += GRAVITY;
-        //fall();
         velocity.x = 0;
 
         jump();
         fall();
+
 
         playerShoot.run(this, playerCastSpell);
         playerCastSpell.run(this, playerShoot.bulletCounter);
@@ -84,6 +87,7 @@ public class Player extends GameObject implements PhysicsBody {
                     boxCollider.getHeight(),
                     Platform.class) != null) {
                 velocity.y = -10f;
+
             }
         }
 
@@ -108,6 +112,9 @@ public class Player extends GameObject implements PhysicsBody {
                 screenPosition.addUp(dx, 0);
             }
             velocity.x = 0;
+            if (platform.isType == HORNTILE) {
+                HP--;
+            }
         }
 
         this.position.x += velocity.x;
@@ -123,9 +130,13 @@ public class Player extends GameObject implements PhysicsBody {
                 position.addUp(0, Math.signum(velocity.y));
                 screenPosition.addUp(0, Math.signum(velocity.y));
             }
-            velocity.y = 0;
+               velocity.y = 0;
+            // Dẫm gai
+            if (platform.isType == HORNTILE) {
+                HP--;
+            }
         }
-
+//TODO FRAMCOUNTER, check not dam gai cho di chuyen ngang
         this.position.y += velocity.y;
         this.screenPosition.y += velocity.y;
     }

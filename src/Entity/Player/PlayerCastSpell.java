@@ -5,7 +5,7 @@ import bases.inputs.InputManager;
 
 public class PlayerCastSpell {
 
-    public boolean isCast;
+    public static boolean isCast;
 
     public PlayerCastSpell() {
         isCast = false;

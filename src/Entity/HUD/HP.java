@@ -23,9 +23,9 @@ public class HP extends GameObject{
         for (int i = 0; i < Player.HP; i++){
             g2d.drawImage(rendererHP.image, (int) position.x + i * 16, (int) position.y, null);
         }
+
         for (int i = 0; i < PlayerShoot.bulletCounter / 5 ; i++) {
             g2d.drawImage(rendererMP.image, (int) position.x + i * 20, (int) position.y + 16, null);
-
         }
 
 

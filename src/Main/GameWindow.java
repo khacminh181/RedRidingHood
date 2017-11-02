@@ -46,10 +46,10 @@ public class GameWindow extends JFrame {
         this.setVisible(true);
 
         addBackGround();
+        addHUD();
         addPlayer();
         addPlatforms();
         addNormalWolf();
-        addHUD();
 
 //        setupStartupScene();
 
@@ -185,6 +185,7 @@ public class GameWindow extends JFrame {
         GameObject.runAll();
         viewPort.follow(player);
         background.getVelocity().set(player.getVelocity());
+
     }
 
 

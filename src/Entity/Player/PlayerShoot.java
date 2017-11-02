@@ -37,5 +37,18 @@ public class PlayerShoot {
             System.out.println(bulletCounter);
         }
 
+        if (InputManager.instance.upPressed) {
+            if (PlayerBullet.bulletHeight >= 20) {
+                PlayerBullet.bulletHeight -= 20;
+            }
+        }
+
+        if (InputManager.instance.downPressed) {
+            if (PlayerBullet.bulletHeight <= 780) {
+                PlayerBullet.bulletHeight += 20;
+            }
+        }
+
+
     }
 }

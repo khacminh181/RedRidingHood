@@ -10,32 +10,65 @@ import bases.renderers.ImageRenderer;
 
 public class PlayerBullet extends GameObject {
 
-
-    final int SPEED = 20;
+    final int SPEED = 10;
     BoxCollider boxCollider;
     public boolean facingRight;
+    Vector2D velocity;
+    private final float GRAVITY = 4f;
 
+    Vector2D playerVelocity;
+
+    public static int bulletHeight = 300;
 
     public PlayerBullet() {
         super();
         this.renderer = new ImageRenderer("assets/images/Player/Bullet.png");
+        velocity = new Vector2D();
         boxCollider = new BoxCollider(16 ,16);
         this.children.add(this.boxCollider);
+        playerVelocity = new Vector2D();
     }
 
 
     public void run(Vector2D parentPosition) {
         super.run(parentPosition);
+        velocity.x = 0;
+
+        if (position.y <= bulletHeight) {
+            velocity.y += GRAVITY;
+        }
+        System.out.println(bulletHeight);
 
         if (facingRight) {
-            this.position.subtractBy(SPEED, 0);
+            if (Physics.collideWith(
+                    screenPosition.add(0, 0),
+                    boxCollider.getWidth(),
+                    boxCollider.getHeight(),
+                    Player.class) != null) {
+                velocity.y = -20f;
+            }
+            velocity.x += -SPEED + playerVelocity.x;
 
         }
+
         else{
-            this.position.subtractBy(-SPEED, 0);
+            if (Physics.collideWith(
+                    screenPosition.add(0, 0),
+                    boxCollider.getWidth(),
+                    boxCollider.getHeight(),
+                    Player.class) != null) {
+                velocity.y = -20f;
+            }
+            velocity.x += SPEED - playerVelocity.x;
 
         }
-        //System.out.println(facingRight);
+        this.position.x += velocity.x;
+        this.screenPosition.x += velocity.x;
+
+        this.position.y += velocity.y;
+        this.screenPosition.y += velocity.y;
+
+
         boxCollider.position.set(this.position);
 
         NormalWolf enemy = Physics.collideWith(this.boxCollider, NormalWolf.class);
