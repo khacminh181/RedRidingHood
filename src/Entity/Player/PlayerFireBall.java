@@ -1,5 +1,7 @@
 package Entity.Player;
 
+import Entity.Enemy.FlowerWolf;
+import Entity.Enemy.NormalWolf;
 import Entity.Platform.Platform;
 import bases.GameObject;
 import bases.Vector2D;
@@ -31,15 +33,18 @@ public class PlayerFireBall extends GameObject{
             this.position.subtractBy(-SPEED, 0);
 
         }
-        //System.out.println(facingRight);
-        boxCollider.position.set(this.position);
 
-//        Enemy enemy = GameObject.collideWith(this.boxCollieder, Enemy.class);
-//        if (enemy != null) {
-//            System.out.println("Hit");
-//            //enemy.getHit();
-//            this.isActive = false;
-//        }
+        NormalWolf enemy = Physics.collideWith(this.boxCollider, NormalWolf.class);
+        FlowerWolf flowerWolf = Physics.collideWith(this.boxCollider, FlowerWolf.class);
+        if (enemy != null) {
+            System.out.println("Hit");
+            enemy.getHit();
+            enemy.getHit();
+        }
+        if (flowerWolf != null) {
+            flowerWolf.getHit();
+        }
+
         hitPlatformer();
     }
 

@@ -38,11 +38,13 @@ public class Background extends GameObject{
     @Override
     public void run(Vector2D parentPosition) {
 //        this.position.subtractBy(20, 0);
-        if (position.x > 800){
+        if (position.x > -800){
             this.position.subtractBy(velocity.x * 0.1f, 0);
         }
         else {
+            System.out.println("oke");
             position.x = 0;
         }
+        System.out.println(position.x);
     }
 }

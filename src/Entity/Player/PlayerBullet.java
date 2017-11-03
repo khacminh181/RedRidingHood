@@ -1,5 +1,6 @@
 package Entity.Player;
 
+import Entity.Enemy.FlowerWolf;
 import Entity.Enemy.NormalWolf;
 import Entity.Platform.Platform;
 import bases.GameObject;
@@ -17,6 +18,7 @@ public class PlayerBullet extends GameObject {
     public static int bulletHeight = 3; // goc nem
     final int SPEED = 8; // vx
     Vector2D velocity;
+    Vector2D playerVelocity;
     private final float GRAVITY = 0.8f;
 
 
@@ -64,16 +66,21 @@ public class PlayerBullet extends GameObject {
         this.position.y += velocity.y;
         this.screenPosition.y += velocity.y;
 
-        // set hitbox cho riu
-        boxCollider.position.set(this.position);
-
         // Va cham enemy
         NormalWolf enemy = Physics.collideWith(this.boxCollider, NormalWolf.class);
+        FlowerWolf flowerWolf = Physics.collideWith(this.boxCollider, FlowerWolf.class);
         if (enemy != null) {
             System.out.println("Hit");
             enemy.getHit();
             this.isActive = false;
         }
+        if (flowerWolf != null) {
+            flowerWolf.getHit();
+            this.isActive = false;
+        }
+
+
+
         hitPlatformer();
     }
 

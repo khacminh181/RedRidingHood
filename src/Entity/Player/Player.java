@@ -12,7 +12,7 @@ import bases.renderers.ImageRenderer;
 import static Entity.Platform.Platform.HORNTILE;
 
 public class Player extends GameObject implements PhysicsBody {
-    private Vector2D velocity;
+    public Vector2D velocity;
     private final float GRAVITY = 0.4f;
     private BoxCollider boxCollider;
 
@@ -29,7 +29,7 @@ public class Player extends GameObject implements PhysicsBody {
         super();
         this.renderer = new ImageRenderer("assets/images/Player/RedRidingHood.png");
         this.velocity = new Vector2D();
-        this.boxCollider = new BoxCollider(64, 64);
+        this.boxCollider = new BoxCollider(30, 64);
         this.children.add(boxCollider);
         playerShoot = new PlayerShoot();
         playerCastSpell = new PlayerCastSpell();
@@ -38,8 +38,6 @@ public class Player extends GameObject implements PhysicsBody {
     public void run(Vector2D parentPosition) {
         super.run(parentPosition);
         updatePhysics();
-
-        System.out.println("player"+position.y);
     }
 
     public Vector2D getVelocity() {
@@ -149,6 +147,8 @@ public class Player extends GameObject implements PhysicsBody {
     }
 
     public void getHit() {
+        HP--;
+        if (HP <= 0)
         isActive = false;
     }
 }

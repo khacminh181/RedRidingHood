@@ -12,7 +12,11 @@ public class NormalWolf extends GameObject implements PhysicsBody {
     private BoxCollider boxCollider;
     private final float GRAVITY = 0.4f;
     private Vector2D velocity;
-    int hP = 5;
+    int hP = 2;
+
+    private final int SPEED = 6;
+    int speed = SPEED;
+
 
     public NormalWolf() {
         super();
@@ -31,20 +35,13 @@ public class NormalWolf extends GameObject implements PhysicsBody {
     public void run(Vector2D parentPosition) {
         super.run(parentPosition);
         updatePosition();
-
     }
 
     private void updatePosition() {
         velocity.y += GRAVITY;
-        move();
+        velocity.x = speed;
         updateVerticalPhysics();
-
-
         updateHorizontalPhysics();
-
-    }
-
-    private void move() {
     }
 
     private void updateVerticalPhysics() {
@@ -73,6 +70,7 @@ public class NormalWolf extends GameObject implements PhysicsBody {
                 screenPosition.addUp(dx, 0);
             }
             velocity.x = 0;
+            speed = -speed;
         }
 
         this.position.x += velocity.x;

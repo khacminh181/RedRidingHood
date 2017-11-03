@@ -1,5 +1,6 @@
 package Main;
 
+import Entity.Enemy.FlowerWolf;
 import Entity.Enemy.NormalWolf;
 import Entity.HUD.HP;
 import Entity.Platform.Platform;
@@ -31,6 +32,7 @@ public class GameWindow extends JFrame {
 
     Player player;
     NormalWolf normalWolf;
+    FlowerWolf flowerWolf;
     Background background;
     HP heart ;
 
@@ -46,10 +48,10 @@ public class GameWindow extends JFrame {
         this.setVisible(true);
 
         addBackGround();
-        addHUD();
         addPlayer();
         addPlatforms();
-        addNormalWolf();
+        addHUD();
+        addEnemy();
 
 //        setupStartupScene();
 
@@ -62,10 +64,18 @@ public class GameWindow extends JFrame {
 
     }
 
-    private void addNormalWolf() {
-        normalWolf = new NormalWolf();
-        normalWolf.position.set(500, 50);
-        GameObject.add(normalWolf);
+    private void addEnemy() {
+        //normalwolf
+        for (int i = 0; i < 3; i++) {
+            normalWolf = new NormalWolf();
+            normalWolf.position.set(500 + i * 50, 50);
+            GameObject.add(normalWolf);
+        }
+
+        // flowerwolf
+        flowerWolf = new FlowerWolf();
+        flowerWolf.position.set(2848, 368);
+        GameObject.add(flowerWolf);
     }
 
     private void addBackGround() {

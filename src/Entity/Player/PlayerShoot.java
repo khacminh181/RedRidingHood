@@ -37,6 +37,7 @@ public class PlayerShoot {
         }
 
 
+
         // Điều khiển góc ném rìu
         if (InputManager.instance.downPressed) {
             if (PlayerBullet.bulletHeight > 0) {
