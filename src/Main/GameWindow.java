@@ -144,14 +144,12 @@ public class GameWindow extends JFrame {
         this.viewPort = new ViewPort();
         this.viewPort.getFollowOffset().set(-400 , -500);
 
-
         this.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
                 System.exit(0);
             }
         });
-
     }
 
     public void gameLoop() {

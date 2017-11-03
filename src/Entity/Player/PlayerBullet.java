@@ -9,17 +9,17 @@ import bases.physics.Physics;
 import bases.renderers.ImageRenderer;
 
 public class PlayerBullet extends GameObject {
-
-    final int SPEED = 18;
     BoxCollider boxCollider;
     public boolean facingRight;
+
+
+    //Nem riu
+    public static int bulletHeight = 3; // goc nem
+    final int SPEED = 8; // vx
     Vector2D velocity;
-    private final float GRAVITY = 4f;
+    private final float GRAVITY = 0.8f;
 
-    Vector2D playerVelocity;
 
-    //Góc ném rìu
-    public static int bulletHeight = 300;
 
     public PlayerBullet() {
         super();
@@ -27,7 +27,6 @@ public class PlayerBullet extends GameObject {
         velocity = new Vector2D();
         boxCollider = new BoxCollider(16 ,16);
         this.children.add(this.boxCollider);
-        playerVelocity = new Vector2D();
     }
 
 
@@ -35,11 +34,7 @@ public class PlayerBullet extends GameObject {
         System.out.println("bullet"+position.y);
         super.run(parentPosition);
         velocity.x = 0;
-
-        if (position.y <= bulletHeight) {
-            velocity.y += GRAVITY;
-        }
-
+        velocity.y += GRAVITY;
         System.out.println(bulletHeight);
 
         if (facingRight) {
@@ -48,31 +43,31 @@ public class PlayerBullet extends GameObject {
                     boxCollider.getWidth(),
                     boxCollider.getHeight(),
                     Player.class) != null) {
-                velocity.y = -20f;
+                velocity.y = -bulletHeight;
             }
-            velocity.x += -SPEED + playerVelocity.x;
+            velocity.x += -SPEED;
 
         }
-
         else{
             if (Physics.collideWith(
                     screenPosition.add(0, 0),
                     boxCollider.getWidth(),
                     boxCollider.getHeight(),
                     Player.class) != null) {
-                velocity.y = -20f;
+                velocity.y = -bulletHeight;
             }
-            velocity.x += SPEED - playerVelocity.x;
+            velocity.x += SPEED;
 
         }
-
         this.position.x += velocity.x;
         this.screenPosition.x += velocity.x;
         this.position.y += velocity.y;
         this.screenPosition.y += velocity.y;
 
+        // set hitbox cho riu
         boxCollider.position.set(this.position);
 
+        // Va cham enemy
         NormalWolf enemy = Physics.collideWith(this.boxCollider, NormalWolf.class);
         if (enemy != null) {
             System.out.println("Hit");

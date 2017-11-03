@@ -5,7 +5,7 @@ import bases.inputs.InputManager;
 
 public class PlayerShoot {
     boolean spellDisabled = false;
-    final int COOL_DOWN_TIME = 10;
+    final int COOL_DOWN_TIME = 20;
     int coolDownCount;
     public static int bulletCounter = 0;
 
@@ -33,26 +33,22 @@ public class PlayerShoot {
             if (bulletCounter < 20) {
                 bulletCounter ++;
             }
-
             System.out.println(bulletCounter);
         }
 
 
         // Điều khiển góc ném rìu
-        if (InputManager.instance.upPressed) {
-            if (PlayerBullet.bulletHeight >= 0) {
-                PlayerBullet.bulletHeight -= 20;
-
-            }
-
-        }
-
         if (InputManager.instance.downPressed) {
-            if (PlayerBullet.bulletHeight <= 780) {
-                PlayerBullet.bulletHeight += 20;
+            if (PlayerBullet.bulletHeight > 0) {
+                PlayerBullet.bulletHeight -= 1;
             }
         }
 
+        if (InputManager.instance.upPressed) {
+            if (PlayerBullet.bulletHeight < 20) {
+                PlayerBullet.bulletHeight += 1;
+            }
+        }
 
     }
 }
