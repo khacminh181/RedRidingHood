@@ -11,6 +11,8 @@ import bases.physics.PhysicsBody;
 import bases.renderers.Animation;
 import tklibs.SpriteUtils;
 
+import java.awt.*;
+
 import static Entity.Platform.Platform.HORNTILE;
 
 public class Player extends GameObject implements PhysicsBody {
@@ -18,12 +20,14 @@ public class Player extends GameObject implements PhysicsBody {
     private final float GRAVITY = 0.4f;
     private BoxCollider boxCollider;
 
+
     PlayerShoot playerShoot;
     PlayerCastSpell playerCastSpell;
 
     boolean facingRight;
 
     public static int HP = 5;
+
 
     FrameCounter frameCounter = new FrameCounter(10);
 
@@ -38,6 +42,13 @@ public class Player extends GameObject implements PhysicsBody {
         this.children.add(boxCollider);
         playerShoot = new PlayerShoot();
         playerCastSpell = new PlayerCastSpell();
+
+    }
+
+    @Override
+    public void render(Graphics2D g2d, ViewPort viewPort) {
+        super.render(g2d, viewPort);
+
     }
 
     public void run(Vector2D parentPosition) {
@@ -55,7 +66,6 @@ public class Player extends GameObject implements PhysicsBody {
 
         jump();
         fall();
-
 
         playerShoot.run(this, playerCastSpell);
         playerCastSpell.run(this, playerShoot.bulletCounter);

@@ -5,6 +5,7 @@ import Entity.Enemy.NormalWolf;
 import Entity.HUD.HP;
 import Entity.Platform.Platform;
 import Entity.Player.Player;
+import Entity.Player.PlayerShootUI;
 import Entity.Player.ViewPort;
 import Tilemap.Background;
 import Tilemap.Map;
@@ -31,6 +32,7 @@ public class GameWindow extends JFrame {
     InputManager inputManager = InputManager.instance;
 
     Player player;
+    PlayerShootUI playerShootUI;
     NormalWolf normalWolf;
     FlowerWolf flowerWolf;
     Background background;
@@ -48,10 +50,11 @@ public class GameWindow extends JFrame {
         this.setVisible(true);
 
         addBackGround();
-        addPlayer();
         addPlatforms();
         addHUD();
         addEnemy();
+        addPlayer();
+
 
 //        setupStartupScene();
 
@@ -87,6 +90,9 @@ public class GameWindow extends JFrame {
         player = new Player();
         player.getPosition().set(400, 50);
         GameObject.add(player);
+        playerShootUI = new PlayerShootUI();
+        playerShootUI.position.set(player.position);
+        GameObject.add(playerShootUI);
     }
 
     private void addPlatforms() {
@@ -192,6 +198,7 @@ public class GameWindow extends JFrame {
         GameObject.runAll();
         viewPort.follow(player);
         background.getVelocity().set(player.getVelocity());
+        playerShootUI.position.set(player.position);
     }
 
     @Override

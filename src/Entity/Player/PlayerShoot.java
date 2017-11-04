@@ -1,5 +1,6 @@
 package Entity.Player;
 
+import bases.FrameCounter;
 import bases.GameObject;
 import bases.inputs.InputManager;
 
@@ -8,6 +9,8 @@ public class PlayerShoot {
     final int COOL_DOWN_TIME = 10;
     int coolDownCount;
     public static int bulletCounter = 0;
+    public static int count = 0;
+    FrameCounter frameCounter = new FrameCounter(2) ;
 
 
 
@@ -18,15 +21,23 @@ public class PlayerShoot {
                 spellDisabled = false;
                 coolDownCount = 0;
             }
+
             return;
         }
 
         if (InputManager.instance.xPressed) {
-            PlayerBullet newBullet = GameObject.recycle(PlayerBullet.class);
-            newBullet.position.set(owner.position);
-            newBullet.facingRight = owner.facingRight;
+                PlayerBullet newBullet = GameObject.recycle(PlayerBullet.class);
+                newBullet.position.set(owner.position);
+                newBullet.bulletHeight = count;
+                newBullet.facingRight = owner.facingRight;
 
-            InputManager.xPressed = false;
+                InputManager.xPressed = false;
+
+                count = 0;
+
+
+
+
 //            if (!InputManager.instance.xPressed) {
 //                PlayerBullet newBullet = GameObject.recycle(PlayerBullet.class);
 //            newBullet.position.set(owner.position);
@@ -42,19 +53,24 @@ public class PlayerShoot {
 //                bulletCounter ++;
 //            }
             //newBullet.bulletHeight = 0;
+
         }
-
-
 
         if (InputManager.shootPressed){
 
-            PlayerBullet.bulletHeight++;
-            if (PlayerBullet.bulletHeight == 20) {
-                PlayerBullet.bulletHeight = 0;
+//            if (PlayerBullet.bulletHeight < 20) {
+//                PlayerBullet.bulletHeight++;
+//            }
+//
+//            spellDisabled = true;
+//            System.out.println(PlayerBullet.bulletHeight);
+
+            if (count < 20) {
+                count++;
             }
 
             spellDisabled = true;
-            System.out.println(PlayerBullet.bulletHeight);
+            System.out.println(count);
         }
 
 

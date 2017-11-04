@@ -16,7 +16,7 @@ public class PlayerBullet extends GameObject {
 
 
     //Nem riu
-    public static int bulletHeight = 5; // goc nem
+    public int bulletHeight; // goc nem
     final int SPEED = 8; // vx
     Vector2D velocity;
     private final float GRAVITY = 0.8f;
@@ -42,6 +42,7 @@ public class PlayerBullet extends GameObject {
         System.out.println("bullet"+position.y);
         super.run(parentPosition);
         velocity.x = 0;
+
         velocity.y += GRAVITY;
         System.out.println(bulletHeight);
 
@@ -71,6 +72,7 @@ public class PlayerBullet extends GameObject {
         this.screenPosition.x += velocity.x;
         this.position.y += velocity.y;
         this.screenPosition.y += velocity.y;
+
 
         // Va cham enemy
         NormalWolf enemy = Physics.collideWith(this.boxCollider, NormalWolf.class);
