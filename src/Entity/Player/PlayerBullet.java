@@ -16,7 +16,7 @@ public class PlayerBullet extends GameObject {
 
 
     //Nem riu
-    public static int bulletHeight = 3; // goc nem
+    public static int bulletHeight = 5; // goc nem
     final int SPEED = 8; // vx
     Vector2D velocity;
     private final float GRAVITY = 0.8f;

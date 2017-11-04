@@ -45,6 +45,5 @@ public class Background extends GameObject{
             System.out.println("oke");
             position.x = 0;
         }
-        System.out.println(position.x);
     }
 }

@@ -186,16 +186,13 @@ public class GameWindow extends JFrame {
         GameObject.renderAll(backBufferGraphics2D, viewPort);
 
         repaint();
-
     }
 
     private void run() {
         GameObject.runAll();
         viewPort.follow(player);
         background.getVelocity().set(player.getVelocity());
-
     }
-
 
     @Override
     public void paint(Graphics g) {

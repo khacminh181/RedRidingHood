@@ -32,7 +32,6 @@ public class Player extends GameObject implements PhysicsBody {
         super();
         this.renderer = new Animation(
                 SpriteUtils.loadImage("assets/images/Player/RedRidingHood0.png")
-
         );
         this.velocity = new Vector2D();
         this.boxCollider = new BoxCollider(30, 64);

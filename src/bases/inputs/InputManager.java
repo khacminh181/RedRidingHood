@@ -9,10 +9,11 @@ public class InputManager {
     public boolean downPressed;
     public boolean leftPressed;
     public boolean rightPressed;
-    public boolean xPressed; // bullet
+    public static boolean xPressed; // bullet
     public boolean zPressed; // glide
     public boolean cPressed; //jump
     public boolean spacePressed; // fireball
+    public static boolean shootPressed;
 
 
     public static final InputManager instance = new InputManager();
@@ -36,7 +37,7 @@ public class InputManager {
                 downPressed = true;
                 break;
             case VK_X:
-                xPressed = true;
+                shootPressed = true;
                 break;
             case VK_Z:
                 zPressed = true;
@@ -65,7 +66,8 @@ public class InputManager {
                 downPressed = false;
                 break;
             case VK_X:
-                xPressed = false;
+                xPressed = true;
+                shootPressed = false;
                 break;
             case VK_Z:
                 zPressed = false;
