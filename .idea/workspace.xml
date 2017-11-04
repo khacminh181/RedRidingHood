@@ -5,23 +5,16 @@
     <bookmark url="file://$PROJECT_DIR$/src/Tilemap/Background.java" line="27" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1113e933-92fe-4ff5-a89b-3855cdfa9718" name="Default" comment="Check platform &quot;horn&quot;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/images/Map1/background1.png" afterPath="$PROJECT_DIR$/assets/images/Map1/background1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/images/Map1/dirt.png" afterPath="$PROJECT_DIR$/assets/images/Map1/dirt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/images/Map1/grass.png" afterPath="$PROJECT_DIR$/assets/images/Map1/grass.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/Player.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/PlayerBullet.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/PlayerBullet.class" />
+    <list default="true" id="1113e933-92fe-4ff5-a89b-3855cdfa9718" name="Default" comment="changed axes">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Enemies/flowerwolf.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Enemies/flowerwolfbullet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/HUD/HP.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/HUD/MP.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Map1/Horn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/Map/horn.tsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/PlayerShoot.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/PlayerShoot.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Tilemap/Background.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Tilemap/Background.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/bases/inputs/InputManager.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/bases/inputs/InputManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Player/Player.java" afterPath="$PROJECT_DIR$/src/Entity/Player/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Player/PlayerBullet.java" afterPath="$PROJECT_DIR$/src/Entity/Player/PlayerBullet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Player/PlayerShoot.java" afterPath="$PROJECT_DIR$/src/Entity/Player/PlayerShoot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/GameWindow.java" afterPath="$PROJECT_DIR$/src/Main/GameWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tilemap/Background.java" afterPath="$PROJECT_DIR$/src/Tilemap/Background.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bases/inputs/InputManager.java" afterPath="$PROJECT_DIR$/src/bases/inputs/InputManager.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,8 +62,8 @@
       <file leaf-file-name="PlayerShoot.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Entity/Player/PlayerShoot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+            <state relative-caret-position="204">
+              <caret line="46" column="7" lean-forward="false" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -522,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509795583190</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="changed axes">
+      <created>1509806272678</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1509806272678</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -598,7 +598,8 @@
     <MESSAGE value="Fixed throwing axes" />
     <MESSAGE value="Added new wolf" />
     <MESSAGE value="Check platform &quot;horn&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Check platform &quot;horn&quot;" />
+    <MESSAGE value="changed axes" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed axes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -958,8 +959,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Player/PlayerShoot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+        <state relative-caret-position="204">
+          <caret line="46" column="7" lean-forward="false" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
