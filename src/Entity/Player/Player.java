@@ -1,13 +1,15 @@
 package Entity.Player;
 
 import Entity.Platform.Platform;
+import bases.FrameCounter;
 import bases.GameObject;
 import bases.Vector2D;
 import bases.inputs.InputManager;
 import bases.physics.BoxCollider;
 import bases.physics.Physics;
 import bases.physics.PhysicsBody;
-import bases.renderers.ImageRenderer;
+import bases.renderers.Animation;
+import tklibs.SpriteUtils;
 
 import static Entity.Platform.Platform.HORNTILE;
 
@@ -23,11 +25,15 @@ public class Player extends GameObject implements PhysicsBody {
 
     public static int HP = 5;
 
+    FrameCounter frameCounter = new FrameCounter(10);
 
 
     public Player() {
         super();
-        this.renderer = new ImageRenderer("assets/images/Player/RedRidingHood.png");
+        this.renderer = new Animation(
+                SpriteUtils.loadImage("assets/images/Player/RedRidingHood0.png")
+
+        );
         this.velocity = new Vector2D();
         this.boxCollider = new BoxCollider(30, 64);
         this.children.add(boxCollider);
@@ -112,9 +118,11 @@ public class Player extends GameObject implements PhysicsBody {
                 screenPosition.addUp(dx, 0);
             }
             velocity.x = 0;
-            if (platform.isType == HORNTILE) {
-                HP--;
+            if (platform.isType == HORNTILE && frameCounter.run()) {
+                getHit();
+                frameCounter.reset();
             }
+
         }
 
         this.position.x += velocity.x;
@@ -132,10 +140,12 @@ public class Player extends GameObject implements PhysicsBody {
             }
                velocity.y = 0;
             // Dẫm gai
-            if (platform.isType == HORNTILE) {
-                HP--;
+            if (platform.isType == HORNTILE && frameCounter.run()) {
+                getHit();
+                frameCounter.reset();
             }
         }
+
 //TODO FRAMCOUNTER, check not dam gai cho di chuyen ngang
         this.position.y += velocity.y;
         this.screenPosition.y += velocity.y;

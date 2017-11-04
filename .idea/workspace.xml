@@ -6,24 +6,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1113e933-92fe-4ff5-a89b-3855cdfa9718" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Entity/Enemy/FlowerWolf.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Entity/Enemy/FlowerWolfBullet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Player/RedRidingHood0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Player/RedRidingHood1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Player/axe0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Player/axe1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Player/axe2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Player/axe3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Player/bigaxe0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Player/bigaxe1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Player/bigaxe2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Player/bigaxe3.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/Player.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/Player.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/PlayerBullet.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/PlayerBullet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/PlayerShoot.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/PlayerShoot.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow$1.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow$2.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Tilemap/Background.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Tilemap/Background.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/PlayerFireBall.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/PlayerFireBall.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/bases/renderers/Animation.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/bases/renderers/Animation.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/Map/mapTest.json" afterPath="$PROJECT_DIR$/assets/Map/mapTest.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Enemy/NormalWolf.java" afterPath="$PROJECT_DIR$/src/Entity/Enemy/NormalWolf.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Player/Player.java" afterPath="$PROJECT_DIR$/src/Entity/Player/Player.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Player/PlayerBullet.java" afterPath="$PROJECT_DIR$/src/Entity/Player/PlayerBullet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Player/PlayerFireBall.java" afterPath="$PROJECT_DIR$/src/Entity/Player/PlayerFireBall.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Player/PlayerShoot.java" afterPath="$PROJECT_DIR$/src/Entity/Player/PlayerShoot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/GameWindow.java" afterPath="$PROJECT_DIR$/src/Main/GameWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tilemap/Background.java" afterPath="$PROJECT_DIR$/src/Tilemap/Background.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bases/renderers/Animation.java" afterPath="$PROJECT_DIR$/src/bases/renderers/Animation.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,15 +39,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Entity/Player/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="263">
+              <caret line="147" column="0" lean-forward="true" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Animation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bases/renderers/Animation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="17" column="47" lean-forward="false" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
               <folding>
-                <element signature="e#1125#1126#0" expanded="true" />
-                <element signature="e#1156#1157#0" expanded="true" />
+                <element signature="e#546#547#0" expanded="true" />
+                <element signature="e#580#581#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FrameCounter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bases/FrameCounter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+              <folding>
+                <element signature="e#352#353#0" expanded="true" />
+                <element signature="e#382#383#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Platform.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Platform/Platform.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="901">
+              <caret line="59" column="44" lean-forward="false" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -54,7 +88,7 @@
       <file leaf-file-name="GameWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/GameWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
+            <state relative-caret-position="1887">
               <caret line="194" column="44" lean-forward="false" selection-start-line="194" selection-start-column="44" selection-end-line="194" selection-end-column="44" />
               <folding>
                 <element signature="method#setupLevel#0;class#GameWindow#0" expanded="false" />
@@ -65,35 +99,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerBullet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PlayerBullet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Player/PlayerBullet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="49" column="32" lean-forward="true" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+            <state relative-caret-position="391">
+              <caret line="31" column="70" lean-forward="false" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerShoot.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Player/PlayerShoot.java">
+      <file leaf-file-name="PlayerFireBall.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Player/PlayerFireBall.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vector2D.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bases/Vector2D.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-              <folding>
-                <element signature="e#477#478#0" expanded="true" />
-                <element signature="e#520#521#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -134,7 +155,6 @@
         <option value="$PROJECT_DIR$/src/ViewPort.java" />
         <option value="$PROJECT_DIR$/src/bases/renderers/Renderer.java" />
         <option value="$PROJECT_DIR$/src/bases/renderers/ImageRenderer.java" />
-        <option value="$PROJECT_DIR$/src/bases/renderers/Animation.java" />
         <option value="$PROJECT_DIR$/src/bases/physics/Physics.java" />
         <option value="$PROJECT_DIR$/src/bases/physics/PhysicsBody.java" />
         <option value="$PROJECT_DIR$/src/Entity/Player.java" />
@@ -157,14 +177,15 @@
         <option value="$PROJECT_DIR$/src/Entity/Platform/Platform.java" />
         <option value="$PROJECT_DIR$/src/Tilemap/Background.java" />
         <option value="$PROJECT_DIR$/src/Entity/Enemy/SpiderWolf.java" />
-        <option value="$PROJECT_DIR$/src/Entity/Player/Player.java" />
         <option value="$PROJECT_DIR$/src/Entity/Enemy/FlowerWolfBullet.java" />
         <option value="$PROJECT_DIR$/src/Main/GameWindow.java" />
         <option value="$PROJECT_DIR$/src/Entity/Enemy/NormalWolf.java" />
         <option value="$PROJECT_DIR$/src/Entity/Enemy/FlowerWolf.java" />
-        <option value="$PROJECT_DIR$/src/Entity/Player/PlayerFireBall.java" />
         <option value="$PROJECT_DIR$/src/Entity/Player/PlayerShoot.java" />
         <option value="$PROJECT_DIR$/src/Entity/Player/PlayerBullet.java" />
+        <option value="$PROJECT_DIR$/src/Entity/Player/PlayerFireBall.java" />
+        <option value="$PROJECT_DIR$/src/bases/renderers/Animation.java" />
+        <option value="$PROJECT_DIR$/src/Entity/Player/Player.java" />
       </list>
     </option>
   </component>
@@ -190,6 +211,8 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -207,6 +230,13 @@
               <item name="RRH-minhnk" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RRH-minhnk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RRH-minhnk" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="Player" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RRH-minhnk" type="b2602c69:ProjectViewProjectNode" />
@@ -269,8 +299,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -284,11 +312,14 @@
     <property name="Repository.Attach.Sources" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Project\RRH-minhnk\assets\images" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="scenes" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project\RRH-minhnk\assets\images\Player" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project\RRH-minhnk\assets\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -484,11 +515,19 @@
       <option name="project" value="LOCAL" />
       <updated>1509689850834</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added new wolf">
+      <created>1509731740365</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1509731740365</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -503,8 +542,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896462" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -516,6 +554,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896462" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -557,7 +596,8 @@
     <MESSAGE value="Changed from shooting bullets to throwing axes" />
     <MESSAGE value="," />
     <MESSAGE value="Fixed throwing axes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed throwing axes" />
+    <MESSAGE value="Added new wolf" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new wolf" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -575,13 +615,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/Menu.java" />
-    <entry file="file://$PROJECT_DIR$/src/bases/FrameCounter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Program.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -620,11 +653,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/images/Map1/backgroung.jpg" />
     <entry file="file://$PROJECT_DIR$/assets/images/Map1/background.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/images/Player/Fireball.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -675,18 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bases/renderers/Animation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/images/Player/Bullet.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Tilemap/Map.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -713,7 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="55" column="75" lean-forward="false" selection-start-line="55" selection-start-column="75" selection-end-line="55" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -756,14 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Platform/Platform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="49" column="43" lean-forward="false" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Player/PlayerCastSpell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -786,7 +793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -794,9 +800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="e#390#391#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -852,21 +855,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Player/PlayerFireBall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="43" column="27" lean-forward="true" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/GameWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
+        <state relative-caret-position="1887">
           <caret line="194" column="44" lean-forward="false" selection-start-line="194" selection-start-column="44" selection-end-line="194" selection-end-column="44" />
           <folding>
             <element signature="method#setupLevel#0;class#GameWindow#0" expanded="false" />
@@ -874,6 +868,11 @@
             <element signature="method#gameLoop#0;class#GameWindow#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/images/Player/Bullet.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bases/Vector2D.java">
@@ -887,20 +886,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Player/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="e#1125#1126#0" expanded="true" />
-            <element signature="e#1156#1157#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Player/PlayerShoot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
+        <state relative-caret-position="578">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
@@ -908,8 +896,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Player/PlayerBullet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="49" column="32" lean-forward="true" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+        <state relative-caret-position="391">
+          <caret line="31" column="70" lean-forward="false" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/images/Player/Fireball.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Player/PlayerFireBall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Platform/Platform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="59" column="44" lean-forward="false" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bases/renderers/Animation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="47" lean-forward="false" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+          <folding>
+            <element signature="e#546#547#0" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bases/FrameCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Player/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="147" column="0" lean-forward="true" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -7,7 +7,8 @@ import bases.GameObject;
 import bases.Vector2D;
 import bases.physics.BoxCollider;
 import bases.physics.Physics;
-import bases.renderers.ImageRenderer;
+import bases.renderers.Animation;
+import tklibs.SpriteUtils;
 
 public class PlayerBullet extends GameObject {
     BoxCollider boxCollider;
@@ -18,14 +19,19 @@ public class PlayerBullet extends GameObject {
     public static int bulletHeight = 3; // goc nem
     final int SPEED = 8; // vx
     Vector2D velocity;
-    Vector2D playerVelocity;
     private final float GRAVITY = 0.8f;
 
 
 
     public PlayerBullet() {
         super();
-        this.renderer = new ImageRenderer("assets/images/Player/Bullet.png");
+        this.renderer = new Animation(
+                SpriteUtils.loadImage("assets/images/Player/axe0.png"),
+                SpriteUtils.loadImage("assets/images/Player/axe1.png"),
+                SpriteUtils.loadImage("assets/images/Player/axe2.png"),
+                SpriteUtils.loadImage("assets/images/Player/axe3.png")
+                );
+        //this.renderer = new ImageRenderer("assets/images/Player/Bullet.png");
         velocity = new Vector2D();
         boxCollider = new BoxCollider(16 ,16);
         this.children.add(this.boxCollider);

@@ -7,7 +7,8 @@ import bases.GameObject;
 import bases.Vector2D;
 import bases.physics.BoxCollider;
 import bases.physics.Physics;
-import bases.renderers.ImageRenderer;
+import bases.renderers.Animation;
+import tklibs.SpriteUtils;
 
 public class PlayerFireBall extends GameObject{
 
@@ -17,7 +18,12 @@ public class PlayerFireBall extends GameObject{
 
     public PlayerFireBall() {
         super();
-        this.renderer = new ImageRenderer("assets/images/Player/Fireball.png");
+        this.renderer = new Animation(
+                SpriteUtils.loadImage("assets/images/Player/bigaxe0.png"),
+                SpriteUtils.loadImage("assets/images/Player/bigaxe1.png"),
+                SpriteUtils.loadImage("assets/images/Player/bigaxe2.png"),
+                SpriteUtils.loadImage("assets/images/Player/bigaxe3.png")
+        );
         boxCollider = new BoxCollider(16 ,16);
         this.children.add(this.boxCollider);
     }
