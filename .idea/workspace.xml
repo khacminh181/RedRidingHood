@@ -6,16 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1113e933-92fe-4ff5-a89b-3855cdfa9718" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/Player.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow$1.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow$2.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/PlayerShoot.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/PlayerShoot.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/HUD/HP.java" afterPath="$PROJECT_DIR$/src/Entity/HUD/HP.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Player/Player.java" afterPath="$PROJECT_DIR$/src/Entity/Player/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Player/PlayerShoot.java" afterPath="$PROJECT_DIR$/src/Entity/Player/PlayerShoot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Player/PlayerShootUI.java" afterPath="$PROJECT_DIR$/src/Entity/Player/PlayerShootUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/GameWindow.java" afterPath="$PROJECT_DIR$/src/Main/GameWindow.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,8 +57,8 @@
       <file leaf-file-name="PlayerFireBall.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Entity/Player/PlayerFireBall.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+            <state relative-caret-position="358">
+              <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -564,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509816669193</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added thanh luc">
+      <created>1509875387372</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1509875387372</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1007,8 +1006,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Player/PlayerFireBall.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+        <state relative-caret-position="358">
+          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
           <folding />
         </state>
       </provider>
