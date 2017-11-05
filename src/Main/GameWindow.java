@@ -91,7 +91,7 @@ public class GameWindow extends JFrame {
         player.getPosition().set(400, 50);
         GameObject.add(player);
         playerShootUI = new PlayerShootUI();
-        playerShootUI.position.set(player.position);
+        playerShootUI.position.set(40, 550);
         GameObject.add(playerShootUI);
     }
 
@@ -197,9 +197,7 @@ public class GameWindow extends JFrame {
     private void run() {
         GameObject.runAll();
         viewPort.follow(player);
-        background.getVelocity().set(player.getVelocity());
-        playerShootUI.position.set(player.position);
-    }
+        background.getVelocity().set(player.getVelocity()); }
 
     @Override
     public void paint(Graphics g) {

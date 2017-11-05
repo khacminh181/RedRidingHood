@@ -1,16 +1,16 @@
 package Entity.Player;
 
-import bases.FrameCounter;
 import bases.GameObject;
 import bases.inputs.InputManager;
 
 public class PlayerShoot {
     boolean spellDisabled = false;
-    final int COOL_DOWN_TIME = 10;
+    final int COOL_DOWN_TIME = 3;
     int coolDownCount;
-    public static int bulletCounter = 0;
+    boolean spellDisabled1 = false;
+    final int COOL_DOWN_TIME_1 = 30;
+    int coolDownCount1;
     public static int count = 0;
-    FrameCounter frameCounter = new FrameCounter(2) ;
 
 
 
@@ -21,7 +21,15 @@ public class PlayerShoot {
                 spellDisabled = false;
                 coolDownCount = 0;
             }
+            return;
+        }
 
+        if (spellDisabled1) {
+            coolDownCount1++;
+            if (coolDownCount1 >= COOL_DOWN_TIME_1) {
+                spellDisabled1 = false;
+                coolDownCount1 = 0;
+            }
             return;
         }
 
@@ -34,58 +42,21 @@ public class PlayerShoot {
                 InputManager.xPressed = false;
 
                 count = 0;
-
-
-
-
-//            if (!InputManager.instance.xPressed) {
-//                PlayerBullet newBullet = GameObject.recycle(PlayerBullet.class);
-//            newBullet.position.set(owner.position);
-//            newBullet.facingRight = owner.facingRight;
-//            }
-
-
-//            if (playerCastSpell.isCast) {
-//                bulletCounter = 0;
-//                playerCastSpell.isCast = false;
-//            }
-//            if (bulletCounter < 20) {
-//                bulletCounter ++;
-//            }
-            //newBullet.bulletHeight = 0;
+                spellDisabled1 = true;
 
         }
 
         if (InputManager.shootPressed){
-
-//            if (PlayerBullet.bulletHeight < 20) {
-//                PlayerBullet.bulletHeight++;
-//            }
-//
-//            spellDisabled = true;
-//            System.out.println(PlayerBullet.bulletHeight);
-
             if (count < 20) {
                 count++;
             }
+            if (count == 20) {
+                count = 0;
+            }
 
             spellDisabled = true;
-            System.out.println(count);
+
         }
-
-
-//        // Điều khiển góc ném rìu
-//        if (InputManager.instance.downPressed) {
-//            if (PlayerBullet.bulletHeight > 0) {
-//                PlayerBullet.bulletHeight -= 10;
-//            }
-//        }
-//
-//        if (InputManager.instance.upPressed) {
-//            if (PlayerBullet.bulletHeight < 20) {
-//                PlayerBullet.bulletHeight += 10;
-//            }
-//        }
 
     }
 }

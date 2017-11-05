@@ -54,6 +54,8 @@ public class Player extends GameObject implements PhysicsBody {
     public void run(Vector2D parentPosition) {
         super.run(parentPosition);
         updatePhysics();
+        System.out.println("player " +screenPosition
+                .x);
     }
 
     public Vector2D getVelocity() {
@@ -61,22 +63,17 @@ public class Player extends GameObject implements PhysicsBody {
     }
 
     private void updatePhysics() {
-//        velocity.y += GRAVITY;
         velocity.x = 0;
 
         jump();
         fall();
-
         playerShoot.run(this, playerCastSpell);
-        playerCastSpell.run(this, playerShoot.bulletCounter);
-
 
         moveHorizontal();
 
         updateHorizontalPhysics();
 
         updateVerticalPhysics();
-
     }
 
 
