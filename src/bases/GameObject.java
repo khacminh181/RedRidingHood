@@ -5,7 +5,9 @@ import bases.physics.Physics;
 import bases.physics.PhysicsBody;
 import bases.renderers.Renderer;
 
+import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.Vector;
 
 public class GameObject {
@@ -19,6 +21,8 @@ public class GameObject {
 
     protected Vector<GameObject> children;
 
+    public ArrayList<Action> actions;
+    public ArrayList<Action> newActions;
 
     static Vector<GameObject> gameObjects = new Vector<>();
     static Vector<GameObject> newGameObjects = new Vector<>();
@@ -34,8 +38,8 @@ public class GameObject {
         this.position = new Vector2D();
         this.screenPosition = new Vector2D();
         this.children = new Vector<>();
-        //  this.actions = new Vector<>();
-        // this.newActions = new Vector<>();
+        this.actions = new ArrayList<>();
+         this.newActions = new ArrayList<>();
         isActive = true;
     }
 
@@ -81,8 +85,17 @@ public class GameObject {
         for (GameObject child : children) {
             child.run(this.screenPosition);
         }
-
     }
+
+//    public void runActions() {
+//        this.actions.removeIf(action -> action.run(this));
+//        this.actions.addAll(newActions);
+//        newActions.clear();
+//    }
+//
+//    public void addAction(Action action) {
+//        newActions.add(action);
+//    }
 
     public static void renderAll(Graphics2D g2d, ViewPort viewPort) {
         for (GameObject gameObject : gameObjects) {

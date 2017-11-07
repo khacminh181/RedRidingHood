@@ -50,10 +50,6 @@ public class PlayerShoot {
             if (count < 20) {
                 count++;
             }
-            if (count == 20) {
-                count = 0;
-            }
-
             spellDisabled = true;
 
         }

@@ -8,8 +8,6 @@ import bases.inputs.InputManager;
 import bases.physics.BoxCollider;
 import bases.physics.Physics;
 import bases.physics.PhysicsBody;
-import bases.renderers.Animation;
-import tklibs.SpriteUtils;
 
 import java.awt.*;
 
@@ -28,15 +26,15 @@ public class Player extends GameObject implements PhysicsBody {
 
     public static int HP = 5;
 
+    PlayerAnimator animator;
 
     FrameCounter frameCounter = new FrameCounter(10);
 
 
     public Player() {
         super();
-        this.renderer = new Animation(
-                SpriteUtils.loadImage("assets/images/Player/RedRidingHood0.png")
-        );
+        animator = new PlayerAnimator();
+        this.renderer = animator;
         this.velocity = new Vector2D();
         this.boxCollider = new BoxCollider(30, 64);
         this.children.add(boxCollider);
@@ -54,8 +52,7 @@ public class Player extends GameObject implements PhysicsBody {
     public void run(Vector2D parentPosition) {
         super.run(parentPosition);
         updatePhysics();
-        System.out.println("player " +screenPosition
-                .x);
+        animator.run(this);
     }
 
     public Vector2D getVelocity() {

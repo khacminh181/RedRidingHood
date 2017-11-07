@@ -3,7 +3,6 @@ package Main;
 import Entity.Enemy.FlowerWolf;
 import Entity.Enemy.NormalWolf;
 import Entity.HUD.HP;
-import Entity.Platform.Platform;
 import Entity.Player.Player;
 import Entity.Player.PlayerShootUI;
 import Entity.Player.ViewPort;
@@ -21,10 +20,8 @@ import java.awt.event.WindowEvent;
 import java.awt.image.BufferedImage;
 
 public class GameWindow extends JFrame {
-
     private long lastTimeUpdate = -1;
     private ViewPort viewPort;
-
 
     private BufferedImage backBufferImage;
     private Graphics2D backBufferGraphics2D;
@@ -46,7 +43,6 @@ public class GameWindow extends JFrame {
         setupWindow();
         setupBackBuffer();
         setupInputs();
-        //setupLevel();
         this.setVisible(true);
 
         addBackGround();
@@ -54,17 +50,12 @@ public class GameWindow extends JFrame {
         addHUD();
         addEnemy();
         addPlayer();
-
-
-//        setupStartupScene();
-
     }
 
     private void addHUD() {
         heart = new HP();
         //heart.position.set(200, 200);
         GameObject.add(heart);
-
     }
 
     private void addEnemy() {
@@ -98,32 +89,6 @@ public class GameWindow extends JFrame {
     private void addPlatforms() {
         Map map = Map.load("assets/Map/mapTest.json");
         map.generate();
-    }
-
-    private void setupLevel() {
-        // Add player
-        Player player = new Player();
-        player.getPosition().set(100, 50);
-        GameObject.add(player);
-
-        // Add platforms
-        for(int i = 0, platformX = 20; i < 20; i++, platformX += 30) {
-            Platform platform = new Platform();
-            platform.getPosition().set(platformX, 600);
-            GameObject.add(platform);
-        }
-
-        for(int i = 0, platformX = 350; i < 9; i++, platformX += 30) {
-            Platform platform = new Platform();
-            platform.getPosition().set(platformX, 500);
-            GameObject.add(platform);
-        }
-
-        for(int i = 0, platformY = 600; i < 3; i++, platformY -= 30) {
-            Platform platform = new Platform();
-            platform.getPosition().set(200, platformY);
-            GameObject.add(platform);
-        }
     }
 
     private void setupInputs() {
