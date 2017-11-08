@@ -5,6 +5,7 @@ import Entity.Player.ViewPort;
 import Entity.Scenes.GamePlayScene;
 import bases.GameObject;
 import bases.inputs.InputManager;
+import bases.scenes.SceneManager;
 import tklibs.AudioUtils;
 
 import javax.swing.*;
@@ -15,6 +16,9 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.image.BufferedImage;
 
+import static bases.scenes.SceneManager.changeSceneIfNeeded;
+import static bases.scenes.SceneManager.currentScene;
+
 public class GameWindow extends JFrame {
     private long lastTimeUpdate = -1;
     private ViewPort viewPort;
@@ -23,9 +27,8 @@ public class GameWindow extends JFrame {
     private Graphics2D backBufferGraphics2D;
 
     InputManager inputManager = InputManager.instance;
-    GamePlayScene playScene;
+    //GamePlayScene playScene;
     PlayerShootUI playerShootUI;
-
 
 
     public final int GAMEPLAY_WIDTH = 800;
@@ -46,8 +49,7 @@ public class GameWindow extends JFrame {
         addHUD();
         addEnemy();
         addPlayer();
-        playScene = new GamePlayScene();
-        playScene.init();
+        SceneManager.changeScene(new GamePlayScene());
 
     }
 
@@ -135,14 +137,16 @@ public class GameWindow extends JFrame {
 
     private void render() {
 
-        GameObject.renderAll(backBufferGraphics2D,playScene.viewPort);
+        GameObject.renderAll(backBufferGraphics2D,currentScene.getViewPort());
 
         repaint();
     }
 
     private void run() {
         GameObject.runAll();
-        playScene.run();
+        changeSceneIfNeeded();
+        currentScene.run();
+
     }
 
     @Override

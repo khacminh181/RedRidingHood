@@ -22,7 +22,7 @@ public class GamePlayScene implements Scene {
     PlayerShootUI playerShootUI;
     @Override
     public void deinit() {
-
+        GameObject.clearAll();
     }
 
     @Override
@@ -77,6 +77,11 @@ public class GamePlayScene implements Scene {
     public void run () {
         viewPort.follow(player);
         background.getVelocity().set(player.getVelocity());
+    }
+
+    @Override
+    public ViewPort getViewPort() {
+        return this.viewPort;
     }
 
 

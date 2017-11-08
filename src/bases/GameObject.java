@@ -121,5 +121,8 @@ public class GameObject {
     }
 
 
-
+    public static void clearAll() {
+        gameObjects.clear();
+        newGameObjects.clear();
+    }
 }

@@ -1,6 +1,7 @@
 package Entity.Player;
 
 import Entity.Platform.Platform;
+import Entity.Scenes.GameOverScene;
 import bases.FrameCounter;
 import bases.GameObject;
 import bases.Vector2D;
@@ -8,6 +9,7 @@ import bases.inputs.InputManager;
 import bases.physics.BoxCollider;
 import bases.physics.Physics;
 import bases.physics.PhysicsBody;
+import bases.scenes.SceneManager;
 
 import java.awt.*;
 
@@ -171,8 +173,11 @@ public class Player extends GameObject implements PhysicsBody {
     public void getHit() {
         if (flinching) return;
         HP--;
-        if (HP <= 0)
-        isActive = false;
+        if (HP <= 0) {
+            isActive = false;
+            SceneManager.changeScene(new GameOverScene());
+        }
         flinching = true;
+        //SceneManager.changeScene(new GameOverScene());
     }
 }
