@@ -20,15 +20,17 @@ public class Player extends GameObject implements PhysicsBody {
 
 
     PlayerShoot playerShoot;
-    PlayerCastSpell playerCastSpell;
 
     boolean facingRight;
+    public boolean flinching; //nhap nhay
 
     public static int HP = 5;
 
     PlayerAnimator animator;
 
     FrameCounter frameCounter = new FrameCounter(10);
+    FrameCounter frameCounterFlinching = new FrameCounter(100);
+
 
 
     public Player() {
@@ -39,12 +41,17 @@ public class Player extends GameObject implements PhysicsBody {
         this.boxCollider = new BoxCollider(30, 64);
         this.children.add(boxCollider);
         playerShoot = new PlayerShoot();
-        playerCastSpell = new PlayerCastSpell();
 
     }
 
     @Override
     public void render(Graphics2D g2d, ViewPort viewPort) {
+        if (flinching) {
+            if (frameCounter.run()) {
+                frameCounter.reset();
+                return;
+            }
+        }
         super.render(g2d, viewPort);
 
     }
@@ -64,7 +71,12 @@ public class Player extends GameObject implements PhysicsBody {
 
         jump();
         fall();
-        playerShoot.run(this, playerCastSpell);
+        playerShoot.run(this);
+        if (flinching && frameCounterFlinching.run() ) {
+            flinching = false;
+            frameCounterFlinching.reset();
+
+        }
 
         moveHorizontal();
 
@@ -72,6 +84,7 @@ public class Player extends GameObject implements PhysicsBody {
 
         updateVerticalPhysics();
     }
+
 
 
 
@@ -114,16 +127,15 @@ public class Player extends GameObject implements PhysicsBody {
         Vector2D checkPosition = screenPosition.add(velocity.x, 0);
         Platform platform = Physics.collideWith(checkPosition, boxCollider.getWidth(), boxCollider.getHeight(), Platform.class);
 
-        if (platform != null) {
+        if (platform != null ) {
             float dx = Math.signum(velocity.x);
             while(Physics.collideWith(screenPosition.add(dx, 0), boxCollider.getWidth(), boxCollider.getHeight(), Platform.class) == null) {
                 position.addUp(dx, 0);
                 screenPosition.addUp(dx, 0);
             }
             velocity.x = 0;
-            if (platform.isType == HORNTILE && frameCounter.run()) {
+            if (platform.isType == HORNTILE ) {
                 getHit();
-                frameCounter.reset();
             }
 
         }
@@ -136,20 +148,17 @@ public class Player extends GameObject implements PhysicsBody {
     private void updateVerticalPhysics() {
         Vector2D checkPosition = screenPosition.add(0, velocity.y);
         Platform platform = Physics.collideWith(checkPosition, boxCollider.getWidth(), boxCollider.getHeight(), Platform.class);
-        if (platform != null) {
+        if (platform != null ) {
             while(Physics.collideWith(screenPosition.add(0, Math.signum(velocity.y)), boxCollider.getWidth(), boxCollider.getHeight(), Platform.class) == null) {
                 position.addUp(0, Math.signum(velocity.y));
                 screenPosition.addUp(0, Math.signum(velocity.y));
             }
                velocity.y = 0;
             // Dẫm gai
-            if (platform.isType == HORNTILE && frameCounter.run()) {
+            if (platform.isType == HORNTILE ) {
                 getHit();
-                frameCounter.reset();
             }
         }
-
-//TODO FRAMCOUNTER, check not dam gai cho di chuyen ngang
         this.position.y += velocity.y;
         this.screenPosition.y += velocity.y;
     }
@@ -160,8 +169,10 @@ public class Player extends GameObject implements PhysicsBody {
     }
 
     public void getHit() {
+        if (flinching) return;
         HP--;
         if (HP <= 0)
         isActive = false;
+        flinching = true;
     }
 }

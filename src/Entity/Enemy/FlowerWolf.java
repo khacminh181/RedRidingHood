@@ -15,17 +15,21 @@ public class FlowerWolf extends GameObject implements PhysicsBody {
     final int COOL_DOWN_TIME = 100;
     int coolDownCount;
 
+
+    PlayerDamage playerDamage;
     public FlowerWolf() {
         super();
         this.renderer = new ImageRenderer("assets/images/Enemies/flowerwolf.png");
         boxCollider = new BoxCollider(32, 64);
         this.children.add(this.boxCollider);
+        playerDamage = new PlayerDamage();
     }
 
     @Override
     public void run(Vector2D parentPosition) {
         super.run(parentPosition);
         shoot();
+        playerDamage.run(this);
     }
 
     private void shoot() {

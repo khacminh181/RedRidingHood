@@ -25,7 +25,6 @@ public class PlayerShootUI extends GameObject{
 
     @Override
     public void render(Graphics2D g2d, ViewPort viewPort) {
-        System.out.println(position.x);
         for (int i = 0; i < PlayerShoot.count; i++){
             g2d.drawImage(renderer.image, (int) position.x + i *8 , (int) position.y - 40 , null);
         }

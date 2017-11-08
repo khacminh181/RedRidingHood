@@ -17,6 +17,8 @@ public class NormalWolf extends GameObject implements PhysicsBody {
     private final int SPEED = 6;
     int speed = SPEED;
 
+    PlayerDamage playerDamage;
+
 
     public NormalWolf() {
         super();
@@ -24,6 +26,7 @@ public class NormalWolf extends GameObject implements PhysicsBody {
         this.velocity = new Vector2D();
         this.boxCollider = new BoxCollider(32, 32);
         this.children.add(boxCollider);
+        playerDamage = new PlayerDamage();
     }
 
     @Override
@@ -35,6 +38,8 @@ public class NormalWolf extends GameObject implements PhysicsBody {
     public void run(Vector2D parentPosition) {
         super.run(parentPosition);
         updatePosition();
+        playerDamage.run(this);
+
     }
 
     private void updatePosition() {

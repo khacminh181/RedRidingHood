@@ -2,6 +2,9 @@ package Entity.Player;
 
 import bases.GameObject;
 import bases.inputs.InputManager;
+import tklibs.AudioUtils;
+
+import javax.sound.sampled.Clip;
 
 public class PlayerShoot {
     boolean spellDisabled = false;
@@ -11,10 +14,10 @@ public class PlayerShoot {
     final int COOL_DOWN_TIME_1 = 30;
     int coolDownCount1;
     public static int count = 0;
+    public AudioUtils audioUtils = new AudioUtils();
+    Clip clip;
 
-
-
-    public void run (Player owner, PlayerCastSpell playerCastSpell) {
+    public void run (Player owner) {
         if (spellDisabled) {
             coolDownCount++;
             if (coolDownCount >= COOL_DOWN_TIME) {
@@ -34,16 +37,18 @@ public class PlayerShoot {
         }
 
         if (InputManager.instance.xPressed) {
-                PlayerBullet newBullet = GameObject.recycle(PlayerBullet.class);
-                newBullet.position.set(owner.position);
-                newBullet.bulletHeight = count;
-                newBullet.facingRight = owner.facingRight;
+            PlayerBullet newBullet = GameObject.recycle(PlayerBullet.class);
+            newBullet.position.set(owner.position);
+            newBullet.bulletHeight = count;
+            newBullet.facingRight = owner.facingRight;
 
-                InputManager.xPressed = false;
+            InputManager.xPressed = false;
 
-                count = 0;
-                spellDisabled1 = true;
+            count = 0;
+            spellDisabled1 = true;
 
+            clip = AudioUtils.loadSound("assets/SFX/throwaxe.wav");
+            AudioUtils.play(clip);
         }
 
         if (InputManager.shootPressed){

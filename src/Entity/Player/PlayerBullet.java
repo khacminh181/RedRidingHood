@@ -39,12 +39,10 @@ public class PlayerBullet extends GameObject {
 
 
     public void run(Vector2D parentPosition) {
-        System.out.println("bullet"+position.y);
         super.run(parentPosition);
         velocity.x = 0;
 
         velocity.y += GRAVITY;
-        System.out.println(bulletHeight);
 
         if (facingRight) {
             if (Physics.collideWith(
@@ -78,7 +76,6 @@ public class PlayerBullet extends GameObject {
         NormalWolf enemy = Physics.collideWith(this.boxCollider, NormalWolf.class);
         FlowerWolf flowerWolf = Physics.collideWith(this.boxCollider, FlowerWolf.class);
         if (enemy != null) {
-            System.out.println("Hit");
             enemy.getHit();
             this.isActive = false;
         }

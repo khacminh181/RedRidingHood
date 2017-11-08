@@ -10,6 +10,7 @@ import Tilemap.Background;
 import Tilemap.Map;
 import bases.GameObject;
 import bases.inputs.InputManager;
+import tklibs.AudioUtils;
 
 import javax.swing.*;
 import java.awt.*;
@@ -39,7 +40,11 @@ public class GameWindow extends JFrame {
     public final int GAMEPLAY_HEIGHT = 600;
 
 
+
+
     public GameWindow() {
+        AudioUtils.initialize();
+        AudioUtils.playMedia("assets/Musics/level1-1.mp3");
         setupWindow();
         setupBackBuffer();
         setupInputs();
@@ -50,6 +55,8 @@ public class GameWindow extends JFrame {
         addHUD();
         addEnemy();
         addPlayer();
+
+
     }
 
     private void addHUD() {
@@ -65,7 +72,6 @@ public class GameWindow extends JFrame {
             normalWolf.position.set(500 + i * 50, 50);
             GameObject.add(normalWolf);
         }
-
         // flowerwolf
         flowerWolf = new FlowerWolf();
         flowerWolf.position.set(2848, 368);
@@ -75,6 +81,7 @@ public class GameWindow extends JFrame {
     private void addBackGround() {
         background = new Background("assets/images/Map1/background1.png");
         GameObject.add(background);
+
     }
 
     private void addPlayer() {
@@ -162,7 +169,8 @@ public class GameWindow extends JFrame {
     private void run() {
         GameObject.runAll();
         viewPort.follow(player);
-        background.getVelocity().set(player.getVelocity()); }
+        background.getVelocity().set(player.getVelocity());
+    }
 
     @Override
     public void paint(Graphics g) {
