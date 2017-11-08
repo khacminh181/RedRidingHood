@@ -1,13 +1,8 @@
 package Main;
 
-import Entity.Enemy.FlowerWolf;
-import Entity.Enemy.NormalWolf;
-import Entity.HUD.HP;
-import Entity.Player.Player;
 import Entity.Player.PlayerShootUI;
 import Entity.Player.ViewPort;
-import Tilemap.Background;
-import Tilemap.Map;
+import Entity.Scenes.GamePlayScene;
 import bases.GameObject;
 import bases.inputs.InputManager;
 import tklibs.AudioUtils;
@@ -28,13 +23,10 @@ public class GameWindow extends JFrame {
     private Graphics2D backBufferGraphics2D;
 
     InputManager inputManager = InputManager.instance;
-
-    Player player;
+    GamePlayScene playScene;
     PlayerShootUI playerShootUI;
-    NormalWolf normalWolf;
-    FlowerWolf flowerWolf;
-    Background background;
-    HP heart ;
+
+
 
     public final int GAMEPLAY_WIDTH = 800;
     public final int GAMEPLAY_HEIGHT = 600;
@@ -49,54 +41,38 @@ public class GameWindow extends JFrame {
         setupBackBuffer();
         setupInputs();
         this.setVisible(true);
-
         addBackGround();
-        addPlatforms();
+        //addPlatforms();
         addHUD();
         addEnemy();
         addPlayer();
-
+        playScene = new GamePlayScene();
+        playScene.init();
 
     }
 
     private void addHUD() {
-        heart = new HP();
-        //heart.position.set(200, 200);
-        GameObject.add(heart);
+
     }
 
     private void addEnemy() {
-        //normalwolf
-        for (int i = 0; i < 3; i++) {
-            normalWolf = new NormalWolf();
-            normalWolf.position.set(500 + i * 50, 50);
-            GameObject.add(normalWolf);
-        }
-        // flowerwolf
-        flowerWolf = new FlowerWolf();
-        flowerWolf.position.set(2848, 368);
-        GameObject.add(flowerWolf);
+
     }
 
     private void addBackGround() {
-        background = new Background("assets/images/Map1/background1.png");
-        GameObject.add(background);
-
     }
 
     private void addPlayer() {
-        player = new Player();
-        player.getPosition().set(400, 50);
-        GameObject.add(player);
+//        player.getPosition().set(400, 50);
         playerShootUI = new PlayerShootUI();
         playerShootUI.position.set(40, 550);
         GameObject.add(playerShootUI);
     }
 
-    private void addPlatforms() {
-        Map map = Map.load("assets/Map/mapTest.json");
-        map.generate();
-    }
+//    private void addPlatforms() {
+//        Map map = Map.load("assets/Map/mapTest.json");
+//        map.generate();
+//    }
 
     private void setupInputs() {
 
@@ -129,8 +105,6 @@ public class GameWindow extends JFrame {
         this.setSize(GAMEPLAY_WIDTH, GAMEPLAY_HEIGHT);
         this.setTitle("RED RIDING HOOD");
         this.setResizable(false);
-        this.viewPort = new ViewPort();
-        this.viewPort.getFollowOffset().set(-400 , -500);
 
         this.addWindowListener(new WindowAdapter() {
             @Override
@@ -161,15 +135,14 @@ public class GameWindow extends JFrame {
 
     private void render() {
 
-        GameObject.renderAll(backBufferGraphics2D, viewPort);
+        GameObject.renderAll(backBufferGraphics2D,playScene.viewPort);
 
         repaint();
     }
 
     private void run() {
         GameObject.runAll();
-        viewPort.follow(player);
-        background.getVelocity().set(player.getVelocity());
+        playScene.run();
     }
 
     @Override
