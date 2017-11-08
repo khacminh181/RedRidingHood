@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1113e933-92fe-4ff5-a89b-3855cdfa9718" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Entity/Scenes/GameOverScene.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bases/scenes/SceneManager.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/Map1/background.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Main/GameWindow.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/scenes/Scene.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/scenes/SceneManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/scenes/Scene.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/scenes/SceneManager.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/images/Map1/background1.png" afterPath="$PROJECT_DIR$/assets/images/Map1/background1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/Player.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/Entity/Player/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RRH-minhnk/bases/GameObject.class" afterPath="$PROJECT_DIR$/out/production/RRH-minhnk/bases/GameObject.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Player/Player.java" afterPath="$PROJECT_DIR$/src/Entity/Player/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Scenes/GamePlayScene.java" afterPath="$PROJECT_DIR$/src/Entity/Scenes/GamePlayScene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/GameWindow.java" afterPath="$PROJECT_DIR$/src/Main/GameWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bases/GameObject.java" afterPath="$PROJECT_DIR$/src/bases/GameObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bases/scenes/Scene.java" afterPath="$PROJECT_DIR$/src/bases/scenes/Scene.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -654,7 +636,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510145471724</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add GamePlayScene">
+      <created>1510151067659</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1510151067659</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
