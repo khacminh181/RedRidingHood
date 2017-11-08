@@ -80,6 +80,11 @@ public class Player extends GameObject implements PhysicsBody {
 
         }
 
+        if(position.y >= 600) {
+            SceneManager.changeScene(new GameOverScene());
+
+        }
+
         moveHorizontal();
 
         updateHorizontalPhysics();
