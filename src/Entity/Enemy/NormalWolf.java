@@ -19,10 +19,13 @@ public class NormalWolf extends GameObject implements PhysicsBody {
 
     PlayerDamage playerDamage;
 
+    public boolean facingRight;
+    NormalWolfAnimator normalWolfAnimator;
 
     public NormalWolf() {
         super();
-        this.renderer = new ImageRenderer("assets/images/Enemies/wolf.png");
+        normalWolfAnimator = new NormalWolfAnimator();
+        this.renderer = normalWolfAnimator;
         this.velocity = new Vector2D();
         this.boxCollider = new BoxCollider(32, 32);
         this.children.add(boxCollider);
@@ -39,6 +42,7 @@ public class NormalWolf extends GameObject implements PhysicsBody {
         super.run(parentPosition);
         updatePosition();
         playerDamage.run(this);
+        normalWolfAnimator.run(this);
 
     }
 
@@ -47,6 +51,14 @@ public class NormalWolf extends GameObject implements PhysicsBody {
         velocity.x = speed;
         updateVerticalPhysics();
         updateHorizontalPhysics();
+        checkFacingRight();
+    }
+
+    private void checkFacingRight() {
+        if (speed > 0) {
+            facingRight = false;
+        }
+        else facingRight = true;
     }
 
     private void updateVerticalPhysics() {

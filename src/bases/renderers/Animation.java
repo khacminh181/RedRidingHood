@@ -15,7 +15,7 @@ public class Animation implements Renderer {
 
     public Animation(boolean repeat, BufferedImage... images) {
         this.images = images;
-        this.frameCounter = new FrameCounter(15);
+        this.frameCounter = new FrameCounter(5);
         this.repeat = repeat;
     }
 
