@@ -26,11 +26,20 @@ public class PlayerBullet extends GameObject {
     public PlayerBullet() {
         super();
         this.renderer = new Animation(
-                SpriteUtils.loadImage("assets/images/Player/axe0.png"),
-                SpriteUtils.loadImage("assets/images/Player/axe1.png"),
-                SpriteUtils.loadImage("assets/images/Player/axe2.png"),
-                SpriteUtils.loadImage("assets/images/Player/axe3.png")
-                );
+                SpriteUtils.loadImage("assets/images/Player/bag0.png"),
+                SpriteUtils.loadImage("assets/images/Player/bag1.png"),
+                SpriteUtils.loadImage("assets/images/Player/bag2.png"),
+                SpriteUtils.loadImage("assets/images/Player/bag3.png"),
+                SpriteUtils.loadImage("assets/images/Player/bag4.png"),
+                SpriteUtils.loadImage("assets/images/Player/bag5.png"),
+                SpriteUtils.loadImage("assets/images/Player/bag6.png"),
+                SpriteUtils.loadImage("assets/images/Player/bag7.png"),
+                SpriteUtils.loadImage("assets/images/Player/bag8.png"),
+                SpriteUtils.loadImage("assets/images/Player/bag9.png"),
+                SpriteUtils.loadImage("assets/images/Player/bag10.png"),
+                SpriteUtils.loadImage("assets/images/Player/bag11.png")
+
+        );
         //this.renderer = new ImageRenderer("assets/images/Player/Bullet.png");
         velocity = new Vector2D();
         boxCollider = new BoxCollider(16 ,16);
