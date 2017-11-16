@@ -1,12 +1,10 @@
 package Main;
 
 import Entity.Player.PlayerShootUI;
-import Entity.Player.ViewPort;
-import Entity.Scenes.GamePlayScene;
+import Entity.Scenes.TutScene;
 import bases.GameObject;
 import bases.inputs.InputManager;
 import bases.scenes.SceneManager;
-import tklibs.AudioUtils;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,60 +19,30 @@ import static bases.scenes.SceneManager.currentScene;
 
 public class GameWindow extends JFrame {
     private long lastTimeUpdate = -1;
-    private ViewPort viewPort;
 
     private BufferedImage backBufferImage;
     private Graphics2D backBufferGraphics2D;
 
     InputManager inputManager = InputManager.instance;
-    //GamePlayScene playScene;
     PlayerShootUI playerShootUI;
-
 
     public final int GAMEPLAY_WIDTH = 800;
     public final int GAMEPLAY_HEIGHT = 600;
 
-
-
-
     public GameWindow() {
-        AudioUtils.initialize();
-        AudioUtils.playMedia("assets/Musics/level1-1.mp3");
         setupWindow();
         setupBackBuffer();
         setupInputs();
         this.setVisible(true);
-        addBackGround();
-        //addPlatforms();
-        addHUD();
-        addEnemy();
         addPlayer();
-        SceneManager.changeScene(new GamePlayScene());
-
-    }
-
-    private void addHUD() {
-
-    }
-
-    private void addEnemy() {
-
-    }
-
-    private void addBackGround() {
+        SceneManager.nextScene = new TutScene();
     }
 
     private void addPlayer() {
-//        player.getPosition().set(400, 50);
         playerShootUI = new PlayerShootUI();
         playerShootUI.position.set(40, 550);
         GameObject.add(playerShootUI);
     }
-
-//    private void addPlatforms() {
-//        Map map = Map.load("assets/Map/mapTest.json");
-//        map.generate();
-//    }
 
     private void setupInputs() {
 
@@ -146,7 +114,6 @@ public class GameWindow extends JFrame {
         GameObject.runAll();
         changeSceneIfNeeded();
         currentScene.run();
-
     }
 
     @Override

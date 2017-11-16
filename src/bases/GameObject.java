@@ -4,6 +4,7 @@ import Entity.Player.ViewPort;
 import bases.physics.Physics;
 import bases.physics.PhysicsBody;
 import bases.renderers.Renderer;
+import bases.scenes.SceneManager;
 
 import javax.swing.*;
 import java.awt.*;
@@ -78,6 +79,7 @@ public class GameObject {
         }
         gameObjects.addAll(newGameObjects);
         newGameObjects.clear();
+
     }
 
     public void run(Vector2D parentPosition) {
@@ -85,6 +87,7 @@ public class GameObject {
         for (GameObject child : children) {
             child.run(this.screenPosition);
         }
+
     }
 
 //    public void runActions() {
@@ -124,5 +127,7 @@ public class GameObject {
     public static void clearAll() {
         gameObjects.clear();
         newGameObjects.clear();
+        Physics.clearAll();
+        SceneManager.mediaPlayer.dispose();
     }
 }

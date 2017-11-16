@@ -10,11 +10,11 @@ import bases.renderers.ImageRenderer;
 
 public class FlowerWolfBullet extends GameObject {
     BoxCollider boxCollider;
-    final int SPEED = 5;
+    public int speed;
 
     public FlowerWolfBullet() {
         super();
-        this.renderer = new ImageRenderer("assets/images/Enemies/flowerwolfbullet.png");
+        this.renderer = new ImageRenderer("assets/images/Enemies/flowerwolf/flowerwolfbullet.png");
         this.boxCollider = new BoxCollider(12, 12);
         this.children.add(this.boxCollider);
     }
@@ -22,7 +22,7 @@ public class FlowerWolfBullet extends GameObject {
     @Override
     public void run(Vector2D parentPosition) {
         super.run(parentPosition);
-        this.position.subtractBy(SPEED, 0);
+        this.position.subtractBy(speed, 0);
 
         // va cham player
         Player player = Physics.collideWith(this.boxCollider, Player.class);

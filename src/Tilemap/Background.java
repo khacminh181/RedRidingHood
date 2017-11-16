@@ -33,12 +33,14 @@ public class Background extends GameObject{
 
         g2d.drawImage(renderer.image, (int)position.x, (int)position.y, null);
         g2d.drawImage(renderer.image, (int)position.x + 800, (int)position.y , null);
+        g2d.drawImage(renderer.image, (int)position.x - 800, (int)position.y , null);
+
     }
 
     @Override
     public void run(Vector2D parentPosition) {
 //        this.position.subtractBy(20, 0);
-        if (position.x > -800){
+        if (position.x > -800 && position.x < 800){
             this.position.subtractBy(velocity.x * 0.1f, 0);
         }
         else {

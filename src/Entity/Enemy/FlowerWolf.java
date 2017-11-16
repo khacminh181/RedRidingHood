@@ -4,7 +4,6 @@ import bases.GameObject;
 import bases.Vector2D;
 import bases.physics.BoxCollider;
 import bases.physics.PhysicsBody;
-import bases.renderers.ImageRenderer;
 
 public class FlowerWolf extends GameObject implements PhysicsBody {
     BoxCollider boxCollider;
@@ -15,11 +14,15 @@ public class FlowerWolf extends GameObject implements PhysicsBody {
     final int COOL_DOWN_TIME = 100;
     int coolDownCount;
 
-
+    public boolean facingRight;
     PlayerDamage playerDamage;
+
+    FlowerWolfAnimator flowerWolfAnimator;
+
     public FlowerWolf() {
         super();
-        this.renderer = new ImageRenderer("assets/images/Enemies/flowerwolf.png");
+        flowerWolfAnimator = new FlowerWolfAnimator();
+        this.renderer = flowerWolfAnimator;
         boxCollider = new BoxCollider(32, 64);
         this.children.add(this.boxCollider);
         playerDamage = new PlayerDamage();
@@ -30,6 +33,8 @@ public class FlowerWolf extends GameObject implements PhysicsBody {
         super.run(parentPosition);
         shoot();
         playerDamage.run(this);
+        flowerWolfAnimator.run(this);
+
     }
 
     private void shoot() {
@@ -44,6 +49,10 @@ public class FlowerWolf extends GameObject implements PhysicsBody {
 
         FlowerWolfBullet newFlowerWolfBullet = GameObject.recycle(FlowerWolfBullet.class);
         newFlowerWolfBullet.position.set(this.position.x, this.position.y - 16);
+        if (!facingRight) {
+            newFlowerWolfBullet.speed = -5;
+        }
+        else newFlowerWolfBullet.speed = 5;
         spellDisabled = true;
 
     }

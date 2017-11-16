@@ -8,7 +8,6 @@ import tklibs.SpriteUtils;
 import java.awt.*;
 
 public class PlayerAnimator implements Renderer{
-
     Animation leftAnimation;
     Animation rightAnimation;
     Animation straightAnimationRight;

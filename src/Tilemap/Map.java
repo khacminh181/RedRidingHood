@@ -13,7 +13,7 @@ public class Map {
             Layer layer = layers.get(0);
             layer.generate();
         }
-        System.out.println(layers);
+          System.out.println(layers.size());
     }
 
     public static Map load(String url) {
