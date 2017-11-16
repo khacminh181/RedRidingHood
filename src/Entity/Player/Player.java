@@ -10,7 +10,9 @@ import bases.physics.BoxCollider;
 import bases.physics.Physics;
 import bases.physics.PhysicsBody;
 import bases.scenes.SceneManager;
+import tklibs.AudioUtils;
 
+import javax.sound.sampled.Clip;
 import java.awt.*;
 
 import static Entity.Platform.Platform.HORNTILE;
@@ -22,7 +24,7 @@ public class Player extends GameObject implements PhysicsBody {
 
 
     PlayerShoot playerShoot;
-
+    Clip clip;
     boolean facingRight;
     public boolean flinching; //nhap nhay
 
@@ -105,6 +107,8 @@ public class Player extends GameObject implements PhysicsBody {
                     boxCollider.getHeight(),
                     Platform.class) != null) {
                 velocity.y = -10f;
+                clip = AudioUtils.loadSound("assets/SFX/jump.wav");
+                AudioUtils.play(clip);
             }
         }
     }
