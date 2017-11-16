@@ -2,7 +2,6 @@ package Entity.Player;
 
 import Entity.Platform.Platform;
 import Entity.Scenes.GameOverScene;
-import Entity.Scenes.GamePlayScene;
 import bases.FrameCounter;
 import bases.GameObject;
 import bases.Vector2D;
@@ -157,9 +156,7 @@ public class Player extends GameObject implements PhysicsBody {
             }
 
             if (platform.isType == Platform.DOORTILE) {
-                if (InputManager.instance.upPressed) {
-                    SceneManager.changeScene(new GamePlayScene());
-                }
+                checkDoor = true;
             }
         }
         this.position.y += velocity.y;
