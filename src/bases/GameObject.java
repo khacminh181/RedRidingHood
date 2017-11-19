@@ -1,5 +1,6 @@
 package bases;
 
+import Entity.Player.Player;
 import Entity.Player.ViewPort;
 import bases.physics.Physics;
 import bases.physics.PhysicsBody;
@@ -22,8 +23,8 @@ public class GameObject {
 
     protected Vector<GameObject> children;
 
-    public ArrayList<Action> actions;
-    public ArrayList<Action> newActions;
+    public ArrayList<bases.action.Action> actions;
+    public ArrayList<bases.action.Action> newActions;
 
     static Vector<GameObject> gameObjects = new Vector<>();
     static Vector<GameObject> newGameObjects = new Vector<>();
@@ -40,7 +41,7 @@ public class GameObject {
         this.screenPosition = new Vector2D();
         this.children = new Vector<>();
         this.actions = new ArrayList<>();
-         this.newActions = new ArrayList<>();
+        this.newActions = new ArrayList<>();
         isActive = true;
     }
 
@@ -76,6 +77,7 @@ public class GameObject {
         for (GameObject gameObject : gameObjects) {
             if (gameObject.isActive)
                 gameObject.run(new Vector2D(0, 0));
+                gameObject.runActions();
         }
         gameObjects.addAll(newGameObjects);
         newGameObjects.clear();
@@ -89,16 +91,16 @@ public class GameObject {
         }
 
     }
+    public void runActions() {
+        this.actions.removeIf(action -> action.run(this));
+        this.actions.addAll(newActions);
+        newActions.clear();
+    }
 
-//    public void runActions() {
-//        this.actions.removeIf(action -> action.run(this));
-//        this.actions.addAll(newActions);
-//        newActions.clear();
-//    }
-//
-//    public void addAction(Action action) {
-//        newActions.add(action);
-//    }
+    public void addAction(bases.action.Action action) {
+        newActions.add(action);
+    }
+
 
     public static void renderAll(Graphics2D g2d, ViewPort viewPort) {
         for (GameObject gameObject : gameObjects) {
@@ -117,7 +119,6 @@ public class GameObject {
                 child.render(g2d, viewPort);
         }
     }
-
 
     public void reset() {
         isActive = true;

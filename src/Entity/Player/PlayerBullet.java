@@ -22,10 +22,9 @@ public class PlayerBullet extends GameObject {
     private final float GRAVITY = 0.8f;
 
 
-
     public PlayerBullet() {
         super();
-        this.renderer = new Animation(
+        this.renderer = new Animation(1,
                 SpriteUtils.loadImage("assets/images/Player/bag0.png"),
                 SpriteUtils.loadImage("assets/images/Player/bag1.png"),
                 SpriteUtils.loadImage("assets/images/Player/bag2.png"),
@@ -50,7 +49,6 @@ public class PlayerBullet extends GameObject {
     public void run(Vector2D parentPosition) {
         super.run(parentPosition);
         velocity.x = 0;
-
         velocity.y += GRAVITY;
 
         if (facingRight) {
@@ -85,15 +83,13 @@ public class PlayerBullet extends GameObject {
         NormalWolf enemy = Physics.collideWith(this.boxCollider, NormalWolf.class);
         FlowerWolf flowerWolf = Physics.collideWith(this.boxCollider, FlowerWolf.class);
         if (enemy != null) {
-            enemy.getHit();
+            enemy.getHit(this.velocity);
             this.isActive = false;
         }
         if (flowerWolf != null) {
             flowerWolf.getHit();
             this.isActive = false;
         }
-
-
 
         hitPlatformer();
     }
@@ -104,6 +100,9 @@ public class PlayerBullet extends GameObject {
             this.isActive = false;
         }
     }
+
+
+
     }
 
 

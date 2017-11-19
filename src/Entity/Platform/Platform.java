@@ -1,6 +1,7 @@
 package Entity.Platform;
 
 import bases.GameObject;
+import bases.Vector2D;
 import bases.physics.BoxCollider;
 import bases.physics.PhysicsBody;
 import bases.renderers.ImageRenderer;
@@ -46,6 +47,11 @@ public class Platform extends GameObject implements PhysicsBody{
     @Override
     public BoxCollider getBoxCollider() {
         return boxCollider;
+    }
+
+    @Override
+    public Vector2D getVelocity() {
+        return new Vector2D();
     }
 
     public static Platform create(int platformType) {

@@ -18,7 +18,7 @@ public class PlayerAnimator implements Renderer {
 
 
     public PlayerAnimator() {
-        leftAnimation = new Animation(
+        leftAnimation = new Animation(5,
                 SpriteUtils.loadImage("assets/images/Player/player_left/player_move_left_0.png"),
                 SpriteUtils.loadImage("assets/images/Player/player_left/player_move_left_1.png"),
                 SpriteUtils.loadImage("assets/images/Player/player_left/player_move_left_2.png"),
@@ -28,7 +28,7 @@ public class PlayerAnimator implements Renderer {
 
         );
 
-        rightAnimation = new Animation(
+        rightAnimation = new Animation(5,
                 SpriteUtils.loadImage("assets/images/Player/player_right/player_move_right_0.png"),
                 SpriteUtils.loadImage("assets/images/Player/player_right/player_move_right_1.png"),
                 SpriteUtils.loadImage("assets/images/Player/player_right/player_move_right_2.png"),
@@ -36,7 +36,7 @@ public class PlayerAnimator implements Renderer {
                 SpriteUtils.loadImage("assets/images/Player/player_right/player_move_right_4.png"),
                 SpriteUtils.loadImage("assets/images/Player/player_right/player_move_right.png")
         );
-        jumpRightAnimation = new Animation(
+        jumpRightAnimation = new Animation(5,
                 SpriteUtils.loadImage("assets/images/Player/player_right/player_jump_right_1.png"),
                 SpriteUtils.loadImage("assets/images/Player/player_right/player_jump_right_2.png"),
                 SpriteUtils.loadImage("assets/images/Player/player_right/player_jump_right_3.png"),
@@ -52,7 +52,7 @@ public class PlayerAnimator implements Renderer {
                 SpriteUtils.loadImage("assets/images/Player/player_right/player_move_right.png")
 
         );
-        jumpLeftAnimation = new Animation(
+        jumpLeftAnimation = new Animation(5,
                 SpriteUtils.loadImage("assets/images/Player/player_left/player_jump_left_1.png"),
                 SpriteUtils.loadImage("assets/images/Player/player_left/player_jump_left_2.png"),
                 SpriteUtils.loadImage("assets/images/Player/player_left/player_jump_left_3.png"),
@@ -67,11 +67,11 @@ public class PlayerAnimator implements Renderer {
                 SpriteUtils.loadImage("assets/images/Player/player_left/player_move_left.png")
         );
 
-        straightAnimationRight = new Animation(
+        straightAnimationRight = new Animation(5,
                 SpriteUtils.loadImage("assets/images/Player/player_right/player_move_right.png")
         );
 
-        straightAnimationLeft = new Animation(
+        straightAnimationLeft = new Animation(5,
                 SpriteUtils.loadImage("assets/images/Player/player_left/player_move_left.png")
         );
 

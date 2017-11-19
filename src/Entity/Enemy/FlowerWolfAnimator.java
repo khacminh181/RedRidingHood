@@ -13,15 +13,16 @@ public class FlowerWolfAnimator implements Renderer {
     Animation currentAnimation;
 
     public FlowerWolfAnimator() {
-        rightAnimation = new Animation(
-                SpriteUtils.loadImage("assets/images/Enemies/flowerwolf/wolf.png"),
-                SpriteUtils.loadImage("assets/images/Enemies/flowerwolf/wolf1.png")
+        rightAnimation = new Animation(10,
+                SpriteUtils.loadImage("assets/images/Enemies/flowerwolf/flowerwolf_right_0.png"),
+                SpriteUtils.loadImage("assets/images/Enemies/flowerwolf/flowerwolf_right_1.png")
         );
 
-        leftAnimation = new Animation(
-                SpriteUtils.loadImage("assets/images/Enemies/flowerwolf/wolfleft.png"),
-                SpriteUtils.loadImage("assets/images/Enemies/flowerwolf/wolf1left.png")
+        leftAnimation = new Animation(10,
+                SpriteUtils.loadImage("assets/images/Enemies/flowerwolf/flowerwolf_left_0.png"),
+                SpriteUtils.loadImage("assets/images/Enemies/flowerwolf/flowerwolf_left_1.png")
         );
+
         currentAnimation = rightAnimation;
     }
 

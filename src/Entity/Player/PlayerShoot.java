@@ -15,7 +15,12 @@ public class PlayerShoot {
     int coolDownCount1;
     public static int count = 0;
     public AudioUtils audioUtils = new AudioUtils();
-    Clip clip;
+    Clip clip, clip1;
+
+    public PlayerShoot () {
+        clip = AudioUtils.loadSound("assets/SFX/Laser_Shoot14.wav");
+        clip1 = AudioUtils.loadSound("assets/SFX/Powerup8.wav");
+    }
 
     public void run (Player owner) {
         if (spellDisabled) {
@@ -47,16 +52,22 @@ public class PlayerShoot {
             count = 0;
             spellDisabled1 = true;
 
-            clip = AudioUtils.loadSound("assets/SFX/throwaxe.wav");
+            //clip = AudioUtils.loadSound("assets/SFX/throwaxe.wav");
             AudioUtils.play(clip);
         }
 
         if (InputManager.shootPressed){
+            if (!clip1.isRunning()) {
+                AudioUtils.play(clip1);
+            }
             if (count < 20) {
                 count++;
             }
             spellDisabled = true;
 
+        }
+        if (InputManager.xPressed) {
+            clip1.stop();
         }
 
     }

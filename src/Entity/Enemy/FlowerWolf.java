@@ -1,9 +1,13 @@
 package Entity.Enemy;
 
 import bases.GameObject;
+import bases.ParticleEffect;
 import bases.Vector2D;
 import bases.physics.BoxCollider;
 import bases.physics.PhysicsBody;
+import tklibs.AudioUtils;
+
+import javax.sound.sampled.Clip;
 
 public class FlowerWolf extends GameObject implements PhysicsBody {
     BoxCollider boxCollider;
@@ -16,7 +20,7 @@ public class FlowerWolf extends GameObject implements PhysicsBody {
 
     public boolean facingRight;
     PlayerDamage playerDamage;
-
+    Clip clip;
     FlowerWolfAnimator flowerWolfAnimator;
 
     public FlowerWolf() {
@@ -35,6 +39,12 @@ public class FlowerWolf extends GameObject implements PhysicsBody {
         playerDamage.run(this);
         flowerWolfAnimator.run(this);
 
+    }
+
+    public void addParticle() {
+        ParticleEffect particleEffect = new ParticleEffect();
+        particleEffect.position.set(this.position);
+        GameObject.add(particleEffect);
     }
 
     private void shoot() {
@@ -59,13 +69,23 @@ public class FlowerWolf extends GameObject implements PhysicsBody {
 
     public void getHit() {
         hP--;
+        clip = AudioUtils.loadSound("assets/SFX/Flower_exclamation.wav");
+        AudioUtils.play(clip);
         if (hP <= 0) {
             isActive = false;
+            for (int i = 0; i < 10; i ++) {
+                addParticle();
+            }
         }
     }
 
     @Override
     public BoxCollider getBoxCollider() {
         return boxCollider;
+    }
+
+    @Override
+    public Vector2D getVelocity() {
+        return new Vector2D();
     }
 }

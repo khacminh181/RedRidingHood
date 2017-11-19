@@ -10,7 +10,7 @@ public class PlayerDamage {
         BoxCollider boxCollieder = owner.getBoxCollider();
         Player player = Physics.collideWith(boxCollieder, Player.class);
         if (player != null) {
-            player.getHit();
+            player.getHit(owner.getVelocity());
         }
     }
 }

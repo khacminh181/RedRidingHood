@@ -58,7 +58,7 @@ public class TutScene implements Scene {
     }
 
     private void addEnemy() {
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 1; i++) {
             normalWolf = new NormalWolf();
             normalWolf.position.set(500 + i * 50, 50);
             GameObject.add(normalWolf);

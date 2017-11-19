@@ -22,18 +22,24 @@ public class Player extends GameObject implements PhysicsBody {
     private final float GRAVITY = 0.4f;
     private BoxCollider boxCollider;
 
-
     PlayerShoot playerShoot;
-    Clip clip;
+
     boolean facingRight;
     public boolean flinching; //nhap nhay
+    public boolean isJumping;
 
-    public int HP = 20;
+    public int HP = 30;
 
     PlayerAnimator animator;
 
     FrameCounter frameCounter = new FrameCounter(10);
     FrameCounter frameCounterFlinching = new FrameCounter(100);
+
+    Clip clip;
+
+    public Vector2D attackerVelocity;
+    public boolean knockBack;
+
 
     public boolean checkDoor;
     public Player() {
@@ -44,6 +50,7 @@ public class Player extends GameObject implements PhysicsBody {
         this.boxCollider = new BoxCollider(30, 60);
         this.children.add(boxCollider);
         playerShoot = new PlayerShoot();
+        attackerVelocity = new Vector2D();
     }
 
     @Override
@@ -77,9 +84,38 @@ public class Player extends GameObject implements PhysicsBody {
             frameCounterFlinching.reset();
         }
         checkDie();
+        checkKnockBack(attackerVelocity);
         moveHorizontal();
         updateHorizontalPhysics();
         updateVerticalPhysics();
+    }
+
+    private void checkKnockBack(Vector2D bulletVelocity) {
+        if (knockBack) {
+            if (bulletVelocity.x > 0) {
+                velocity.addUp(10, 0);
+            }
+            else if (bulletVelocity.x < 0) {
+                velocity.addUp(-10, 0);
+
+            }
+            else if (bulletVelocity.x == 0) {
+                if (!facingRight) {
+                    velocity.addUp(-10, 0);
+
+                }
+                else if (facingRight) {
+                    velocity.addUp(10, 0);
+                }
+
+            }
+            velocity.addUp(0, -5);
+//            if (!isJumping) {
+//                velocity.subtractBy(0, -5);
+//                isJumping = true;
+//            }
+            knockBack = false;
+        }
     }
 
     private void checkDie() {
@@ -105,10 +141,21 @@ public class Player extends GameObject implements PhysicsBody {
                     screenPosition.add(0, 1),
                     boxCollider.getWidth(),
                     boxCollider.getHeight(),
-                    Platform.class) != null) {
-                velocity.y = -10f;
-                clip = AudioUtils.loadSound("assets/SFX/jump.wav");
-                AudioUtils.play(clip);
+                    Platform.class) != null ) {
+                if (Physics.collideWith(
+                        screenPosition.add(0, 1),
+                        boxCollider.getWidth(),
+                        boxCollider.getHeight(),
+                        Platform.class).isType == HORNTILE && knockBack ) {
+                    velocity.y = -5f;
+                    clip = AudioUtils.loadSound("assets/SFX/jump.wav");
+                    AudioUtils.play(clip);
+                }
+                else {
+                    velocity.y = -10f;
+                    clip = AudioUtils.loadSound("assets/SFX/jump.wav");
+                    AudioUtils.play(clip);
+                }
             }
         }
     }
@@ -132,7 +179,7 @@ public class Player extends GameObject implements PhysicsBody {
             }
             velocity.x = 0;
             if (platform.isType == HORNTILE ) {
-                getHit();
+                getHit(new Vector2D(0,0));
             }
 
             if ( platform.isType == Platform.DOORTILE) {
@@ -156,7 +203,7 @@ public class Player extends GameObject implements PhysicsBody {
                velocity.y = 0;
             // Dẫm gai
             if (platform.isType == HORNTILE ) {
-                getHit();
+                getHit(new Vector2D(0, 0));
             }
 
             if (platform.isType == Platform.DOORTILE) {
@@ -172,8 +219,12 @@ public class Player extends GameObject implements PhysicsBody {
         return boxCollider;
     }
 
-    public void getHit() {
+    public void getHit(Vector2D bulletVelocity) {
+        attackerVelocity.set(bulletVelocity);
         if (flinching) return;
+        knockBack = true;
+        clip = AudioUtils.loadSound("assets/SFX/moaning_RRH2.wav");
+        AudioUtils.play(clip);
         HP--;
         if (HP <= 0) {
             isActive = false;

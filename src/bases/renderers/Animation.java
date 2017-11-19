@@ -13,14 +13,14 @@ public class Animation implements Renderer {
     boolean repeat;
     public boolean ended;
 
-    public Animation(boolean repeat, BufferedImage... images) {
+    public Animation(boolean repeat, int countMax, BufferedImage... images) {
         this.images = images;
-        this.frameCounter = new FrameCounter(5);
+        this.frameCounter = new FrameCounter(countMax);
         this.repeat = repeat;
     }
 
-    public Animation(BufferedImage... images) {
-        this(true, images);
+    public Animation( int countMax, BufferedImage... images) {
+        this(true, countMax, images);
     }
 
     @Override
