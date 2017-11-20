@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ae8fffc-788a-4a44-b78d-e86dc96ba8a7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Entity/Boss/Boss.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Entity/Boss/BossAnimator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Entity/Boss/BossBigBullet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Entity/Boss/BossBullet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Entity/Boss/WolfSpawner.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bases/action/ActionGroup.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bases/action/ActionMoveBy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bases/action/ActionRepeatForever.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Entity/Enemy/EnemyDie.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Enemy/FlowerWolf.java" afterPath="$PROJECT_DIR$/src/Entity/Enemy/FlowerWolf.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Enemy/NormalWolf.java" afterPath="$PROJECT_DIR$/src/Entity/Enemy/NormalWolf.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Enemy/PlayerDamage.java" afterPath="$PROJECT_DIR$/src/Entity/Enemy/PlayerDamage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Player/Player.java" afterPath="$PROJECT_DIR$/src/Entity/Player/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Player/PlayerBullet.java" afterPath="$PROJECT_DIR$/src/Entity/Player/PlayerBullet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Player/PlayerShoot.java" afterPath="$PROJECT_DIR$/src/Entity/Player/PlayerShoot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Scenes/GameOverScene.java" afterPath="$PROJECT_DIR$/src/Entity/Scenes/GameOverScene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Scenes/GamePlayScene.java" afterPath="$PROJECT_DIR$/src/Entity/Scenes/GamePlayScene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Scenes/TutScene.java" afterPath="$PROJECT_DIR$/src/Entity/Scenes/TutScene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bases/GameObject.java" afterPath="$PROJECT_DIR$/src/bases/GameObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bases/ParticleEffect.java" afterPath="$PROJECT_DIR$/src/bases/ParticleEffect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bases/Vector2D.java" afterPath="$PROJECT_DIR$/src/bases/Vector2D.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bases/action/ActionRepeat.java" afterPath="$PROJECT_DIR$/src/bases/action/ActionRepeat.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -454,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511077638034</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Boss">
+      <created>1511179035086</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1511179035086</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -522,7 +506,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge code" />
+    <MESSAGE value="Boss" />
+    <option name="LAST_COMMIT_MESSAGE" value="Boss" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
