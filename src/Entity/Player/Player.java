@@ -88,32 +88,34 @@ public class Player extends GameObject implements PhysicsBody {
         moveHorizontal();
         updateHorizontalPhysics();
         updateVerticalPhysics();
+        if (velocity.y == 0) {
+            isJumping = false;
+        }
     }
 
     private void checkKnockBack(Vector2D bulletVelocity) {
         if (knockBack) {
             if (bulletVelocity.x > 0) {
-                velocity.addUp(10, 0);
+                velocity.addUp(30, 0);
             }
             else if (bulletVelocity.x < 0) {
-                velocity.addUp(-10, 0);
+                velocity.addUp(-30, 0);
 
             }
             else if (bulletVelocity.x == 0) {
                 if (!facingRight) {
-                    velocity.addUp(-10, 0);
+                    velocity.addUp(-30, 0);
 
                 }
                 else if (facingRight) {
-                    velocity.addUp(10, 0);
+                    velocity.addUp(30, 0);
                 }
 
             }
-            velocity.addUp(0, -5);
-//            if (!isJumping) {
-//                velocity.subtractBy(0, -5);
-//                isJumping = true;
-//            }
+//            velocity.addUp(0, -5);
+            if (!isJumping) {
+                velocity.addUp(0, -5);
+            }
             knockBack = false;
         }
     }
@@ -142,29 +144,17 @@ public class Player extends GameObject implements PhysicsBody {
                     boxCollider.getWidth(),
                     boxCollider.getHeight(),
                     Platform.class) != null ) {
-                if (Physics.collideWith(
-                        screenPosition.add(0, 1),
-                        boxCollider.getWidth(),
-                        boxCollider.getHeight(),
-                        Platform.class).isType == HORNTILE && knockBack ) {
-                    velocity.y = -5f;
-                    clip = AudioUtils.loadSound("assets/SFX/jump.wav");
-                    AudioUtils.play(clip);
-                }
-                else {
-                    velocity.y = -10f;
-                    clip = AudioUtils.loadSound("assets/SFX/jump.wav");
-                    AudioUtils.play(clip);
-                }
+                isJumping = true;
+                velocity.y = -10f;
+                clip = AudioUtils.loadSound("assets/SFX/jump.wav");
+                AudioUtils.play(clip);
             }
+
         }
     }
 
     private void fall() {
-        if (velocity.y > 0 && InputManager.instance.zPressed) {
-            velocity.y += GRAVITY * 0.1f ;
-        }
-        else velocity.y += GRAVITY;
+       velocity.y += GRAVITY;
     }
 
     private void updateHorizontalPhysics() {
@@ -188,7 +178,6 @@ public class Player extends GameObject implements PhysicsBody {
         }
         this.position.x += velocity.x;
         this.screenPosition.x += velocity.x;
-
     }
 
     private void updateVerticalPhysics() {
@@ -226,6 +215,20 @@ public class Player extends GameObject implements PhysicsBody {
         clip = AudioUtils.loadSound("assets/SFX/moaning_RRH2.wav");
         AudioUtils.play(clip);
         HP--;
+        if (HP <= 0) {
+            isActive = false;
+            SceneManager.changeScene(new GameOverScene());
+        }
+        flinching = true;
+    }
+
+    public void getHitByBoss(Vector2D bulletVelocity) {
+        attackerVelocity.set(bulletVelocity);
+        if (flinching) return;
+        knockBack = true;
+        clip = AudioUtils.loadSound("assets/SFX/moaning_RRH2.wav");
+        AudioUtils.play(clip);
+        HP -= 3;
         if (HP <= 0) {
             isActive = false;
             SceneManager.changeScene(new GameOverScene());

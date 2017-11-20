@@ -42,6 +42,8 @@ public class FlowerWolf extends GameObject implements PhysicsBody {
     }
 
     public void addParticle() {
+//        ParticleEffect particleEffect1 = GameObject.recycle(ParticleEffect.class);
+//        particleEffect1.position.set(this.position);
         ParticleEffect particleEffect = new ParticleEffect();
         particleEffect.position.set(this.position);
         GameObject.add(particleEffect);
@@ -73,7 +75,7 @@ public class FlowerWolf extends GameObject implements PhysicsBody {
         AudioUtils.play(clip);
         if (hP <= 0) {
             isActive = false;
-            for (int i = 0; i < 10; i ++) {
+            for (int i = 0; i < 7; i ++) {
                 addParticle();
             }
         }

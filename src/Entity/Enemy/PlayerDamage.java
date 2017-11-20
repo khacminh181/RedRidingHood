@@ -1,5 +1,6 @@
 package Entity.Enemy;
 
+import Entity.Boss.Boss;
 import Entity.Player.Player;
 import bases.physics.BoxCollider;
 import bases.physics.Physics;
@@ -10,7 +11,12 @@ public class PlayerDamage {
         BoxCollider boxCollieder = owner.getBoxCollider();
         Player player = Physics.collideWith(boxCollieder, Player.class);
         if (player != null) {
-            player.getHit(owner.getVelocity());
+            if (owner instanceof Boss) {
+                player.getHitByBoss(owner.getVelocity());
+            }
+            else {
+                player.getHit(owner.getVelocity());
+            }
         }
     }
 }

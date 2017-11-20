@@ -20,7 +20,7 @@ public class ParticleEffect extends GameObject implements PhysicsBody{
     public ParticleEffect() {
         velocity = new Vector2D();
         generateAngle();
-        frameCounter = new FrameCounter(600);
+        frameCounter = new FrameCounter(200);
     }
 
     @Override
@@ -28,6 +28,7 @@ public class ParticleEffect extends GameObject implements PhysicsBody{
         super.run(parentPosition);
         updatePhysics();
         deactiveParticleIfNeed();
+
     }
 
     private void updatePhysics() {

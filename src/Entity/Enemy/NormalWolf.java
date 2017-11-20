@@ -42,8 +42,12 @@ public class NormalWolf extends GameObject implements PhysicsBody {
     }
 
     public void addParticle() {
-        ParticleEffect particleEffect = GameObject.recycle(ParticleEffect.class);
+//        ParticleEffect particleEffect = GameObject.recycle(ParticleEffect.class);
+//        particleEffect.position.set(this.position);
+
+        ParticleEffect particleEffect = new ParticleEffect();
         particleEffect.position.set(this.position);
+        GameObject.add(particleEffect);
     }
 
     @Override
@@ -68,26 +72,22 @@ public class NormalWolf extends GameObject implements PhysicsBody {
         velocity.x = 0;
         velocity.y += GRAVITY;
         velocity.x += speed;
+        checkKnockBack(attackerVelocity);
         updateVerticalPhysics();
         updateHorizontalPhysics();
         checkFacingRight();
-        checkKnockBack(attackerVelocity);
     }
 
     private void checkKnockBack(Vector2D bulletVelocity) {
         if (knockBack) {
             if (bulletVelocity.x > 0) {
-                position.y -= 20;
-                screenPosition.y -= 20;
-                position.x += 20;
-                screenPosition.x += 20;
+                velocity.addUp(30, 0);
             }
             else if (bulletVelocity.x < 0) {
-                position.y -= 20;
-                screenPosition.y -= 20;
-                position.x -= 20;
-                screenPosition.x -= 20;
+                velocity.addUp(-30, 0);
             }
+            velocity.addUp(0, -5);
+
             knockBack = false;
         }
     }

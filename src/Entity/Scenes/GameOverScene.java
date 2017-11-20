@@ -12,6 +12,7 @@ public class GameOverScene implements Scene {
 
     @Override
     public void deinit() {
+        GameObject.clearAll();
     }
 
     @Override

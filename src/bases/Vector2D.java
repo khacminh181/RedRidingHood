@@ -6,6 +6,8 @@ public class Vector2D {
     public float x;
     public float y;
 
+    public static final Vector2D DOWN = new Vector2D(0, 1);
+
     public Vector2D() {
         this (0,0);
     }
@@ -78,5 +80,12 @@ public class Vector2D {
     public Vector2D normalize() {
         float length = length();
         return new Vector2D(this.x / length, this.y / length);
+    }
+
+    public Vector2D rotate(float angle) {
+        double rad = Math.toRadians(angle);
+        float cos = (float) Math.cos(rad);
+        float sin = (float) Math.sin(rad);
+        return new Vector2D(cos * x - sin * y, sin * x + cos * y);
     }
 }

@@ -30,7 +30,7 @@ public class TutScene implements Scene {
     @Override
     public void init() {
         AudioUtils.initialize();
-        SceneManager.mediaPlayer = AudioUtils.playMedia("assets/Musics/level1-2.MP3");
+        SceneManager.mediaPlayer = AudioUtils.playMedia("assets/Musics/On Tiptoe.mp3");
         addBackGround();
         addPlatform();
         addPlayer();

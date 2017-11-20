@@ -19,7 +19,7 @@ public class PlayerShoot {
 
     public PlayerShoot () {
         clip = AudioUtils.loadSound("assets/SFX/Laser_Shoot14.wav");
-        clip1 = AudioUtils.loadSound("assets/SFX/Powerup8.wav");
+        clip1 = AudioUtils.loadSound("assets/SFX/power.wav");
     }
 
     public void run (Player owner) {

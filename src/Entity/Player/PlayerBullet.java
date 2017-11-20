@@ -1,5 +1,6 @@
 package Entity.Player;
 
+import Entity.Boss.Boss;
 import Entity.Enemy.FlowerWolf;
 import Entity.Enemy.NormalWolf;
 import Entity.Platform.Platform;
@@ -82,12 +83,17 @@ public class PlayerBullet extends GameObject {
         // Va cham enemy
         NormalWolf enemy = Physics.collideWith(this.boxCollider, NormalWolf.class);
         FlowerWolf flowerWolf = Physics.collideWith(this.boxCollider, FlowerWolf.class);
+        Boss boss = Physics.collideWith(this.boxCollider, Boss.class);
         if (enemy != null) {
             enemy.getHit(this.velocity);
             this.isActive = false;
         }
         if (flowerWolf != null) {
             flowerWolf.getHit();
+            this.isActive = false;
+        }
+        if (boss != null) {
+            boss.getHit();
             this.isActive = false;
         }
 

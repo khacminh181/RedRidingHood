@@ -12,7 +12,8 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Vector;
 
-public class GameObject {
+public class
+GameObject {
     public Vector2D position;
     public Vector2D screenPosition;
 
@@ -75,13 +76,13 @@ public class GameObject {
 
     public static void runAll() {
         for (GameObject gameObject : gameObjects) {
-            if (gameObject.isActive)
+            if (gameObject.isActive) {
                 gameObject.run(new Vector2D(0, 0));
                 gameObject.runActions();
+            }
         }
         gameObjects.addAll(newGameObjects);
         newGameObjects.clear();
-
     }
 
     public void run(Vector2D parentPosition) {

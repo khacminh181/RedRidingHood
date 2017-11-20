@@ -30,7 +30,7 @@ public class GamePlayScene implements Scene {
     @Override
     public void init() {
         AudioUtils.initialize();
-        SceneManager.mediaPlayer = AudioUtils.playMedia("assets/Musics/level1-1.mp3");
+        SceneManager.mediaPlayer = AudioUtils.playMedia("assets/Musics/Bats In The Belfry.mp3");
         addBackGround();
         addPlatform();
         addPlayer();
@@ -163,11 +163,11 @@ public class GamePlayScene implements Scene {
         background.getVelocity().set(player.getVelocity());
         heart.hP = player.HP;
         if (InputManager.instance.spacePressed) {
-            SceneManager.changeScene(new GameWinScene());
+            SceneManager.changeScene(new BossScene());
         }
         if (player.checkDoor) {
             if (InputManager.instance.upPressed) {
-                SceneManager.changeScene(new GameWinScene());
+                SceneManager.changeScene(new BossScene());
             }
         }
     }
