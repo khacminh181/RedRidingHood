@@ -106,7 +106,9 @@ public class BossScene implements Scene {
         }
         if (player.checkDoor) {
             if (InputManager.instance.upPressed) {
-                SceneManager.changeScene(new GameWinScene());
+                if (boss.hP <= 0) {
+                    SceneManager.changeScene(new GameWinScene());
+                }
             }
         }
     }
