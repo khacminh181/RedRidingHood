@@ -1,6 +1,7 @@
 package Entity.Scenes;
 
 import Entity.Boss.Boss;
+import Entity.Boss.GhostSpawner;
 import Entity.Boss.WolfSpawner;
 import Entity.Enemy.NormalWolf;
 import Entity.HUD.HP;
@@ -25,7 +26,9 @@ public class BossScene implements Scene {
     HP heart ;
     NormalWolf normalWolf;
     Boss boss;
+    HP bossHP;
     WolfSpawner wolfSpawner;
+    GhostSpawner ghostSpawner;
 
     PlayerShootUI playerShootUI;
 
@@ -57,7 +60,11 @@ public class BossScene implements Scene {
 
     private void addHP() {
         heart = new HP();
+        bossHP = new HP();
+        heart.position.set(0, 30);
+        bossHP.position.set(500, 30);
         GameObject.add(heart);
+        GameObject.add(bossHP);
     }
 
     private void addEnemy() {
@@ -65,6 +72,9 @@ public class BossScene implements Scene {
 //        normalWolf.position.set(50, 100);
         wolfSpawner = new WolfSpawner();
         GameObject.add(wolfSpawner);
+        ghostSpawner = new GhostSpawner();
+        GameObject.add(ghostSpawner);
+
     }
 
     private void addPlayer() {
@@ -91,6 +101,7 @@ public class BossScene implements Scene {
         //viewPort.follow(player);
         //background.getVelocity().set(player.getVelocity());
         heart.hP = player.HP;
+        bossHP.hP = boss.hP;
         System.out.println(boss.isShooting);
         if (InputManager.instance.spacePressed) {
             SceneManager.changeScene(new GameWinScene());

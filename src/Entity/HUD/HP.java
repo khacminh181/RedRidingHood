@@ -12,7 +12,7 @@ public class HP extends GameObject{
     public int hP;
 
     public HP() {
-        this.position.set(0, 30);
+        //this.position.set(0, 30);
         rendererHP = new ImageRenderer("assets/images/HUD/HP.png");
     }
 

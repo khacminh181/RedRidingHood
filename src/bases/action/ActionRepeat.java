@@ -31,5 +31,6 @@ public class ActionRepeat implements Action {
     public void reset() {
         count = 0;
         action.reset();
+
     }
 }

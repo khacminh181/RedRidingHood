@@ -28,7 +28,7 @@ public class Player extends GameObject implements PhysicsBody {
     public boolean flinching; //nhap nhay
     public boolean isJumping;
 
-    public int HP = 30;
+    public int HP = 8;
 
     PlayerAnimator animator;
 

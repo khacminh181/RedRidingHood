@@ -36,8 +36,9 @@ public class Boss extends GameObject implements PhysicsBody {
         this.children.add(boxCollider);
         playerDamage = new PlayerDamage();
 
-        Action waitAction = new ActionWait(400);
+        Action waitAction = new ActionWait(200);
         Action waitAction1 = new ActionWait(50);
+
         Action shootAction = new Action() {
             @Override
             public boolean run(GameObject owner) {
@@ -54,6 +55,7 @@ public class Boss extends GameObject implements PhysicsBody {
 
             }
         };
+
         Action resetShoot = new Action() {
             @Override
             public boolean run(GameObject owner) {
@@ -74,8 +76,6 @@ public class Boss extends GameObject implements PhysicsBody {
 
 
     public void addParticle() {
-//        ParticleEffect particleEffect = GameObject.recycle(ParticleEffect.class);
-//        particleEffect.position.set(this.position);
         ParticleEffect particleEffect = new ParticleEffect();
         particleEffect.position.set(this.position);
         GameObject.add(particleEffect);
