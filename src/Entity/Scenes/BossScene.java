@@ -18,6 +18,7 @@ import bases.action.ActionRepeatForever;
 import bases.inputs.InputManager;
 import bases.scenes.Scene;
 import bases.scenes.SceneManager;
+import javafx.util.Duration;
 import tklibs.AudioUtils;
 import tklibs.Utils;
 
@@ -43,6 +44,13 @@ public class BossScene implements Scene {
     public void init() {
         AudioUtils.initialize();
         SceneManager.mediaPlayer = AudioUtils.playMedia("assets/Musics/Bats In The Belfry.mp3");
+        SceneManager.mediaPlayer.setOnEndOfMedia(new Runnable() {
+            public void run() {
+                SceneManager.mediaPlayer.seek(Duration.ZERO);
+            }
+        });
+        SceneManager.mediaPlayer.play();
+
         addBackGround();
         addPlatform();
         addPlayer();
@@ -55,14 +63,13 @@ public class BossScene implements Scene {
 
     private void addBoss() {
         boss = new Boss();
-        boss.position.set(17 * 32 + 112 + 8 +4 + 2 , 16*32 - 224 + 8 + 8 );
+        boss.position.set(17 * 32 + 112 + 8 +4 + 2 , 16*32 - 224 + 8 + 8+80 );
         GameObject.add(boss);
 
     }
 
     private void addHP() {
         heart = new HP();
-        heart.position.set(0, 30);
         GameObject.add(heart);
 
     }
@@ -105,7 +112,7 @@ public class BossScene implements Scene {
         ghostSpawner.bossHP = boss.hP;
 
         System.out.println(boss.isShooting);
-        if (InputManager.instance.spacePressed) {
+        if (InputManager.instance.cheatPressed) {
             SceneManager.changeScene(new GameWinScene());
         }
 

@@ -16,7 +16,6 @@ public class PlayerAnimator implements Renderer {
     Animation jumpRightAnimation;
     Animation jumpLeftAnimation;
 
-
     public PlayerAnimator() {
         leftAnimation = new Animation(5,
                 SpriteUtils.loadImage("assets/images/Player/player_left/player_move_left_0.png"),
@@ -36,7 +35,7 @@ public class PlayerAnimator implements Renderer {
                 SpriteUtils.loadImage("assets/images/Player/player_right/player_move_right_4.png"),
                 SpriteUtils.loadImage("assets/images/Player/player_right/player_move_right.png")
         );
-        jumpRightAnimation = new Animation(5,
+        jumpRightAnimation = new Animation(4,
                 SpriteUtils.loadImage("assets/images/Player/player_right/player_jump_right_1.png"),
                 SpriteUtils.loadImage("assets/images/Player/player_right/player_jump_right_2.png"),
                 SpriteUtils.loadImage("assets/images/Player/player_right/player_jump_right_3.png"),
@@ -52,7 +51,7 @@ public class PlayerAnimator implements Renderer {
                 SpriteUtils.loadImage("assets/images/Player/player_right/player_move_right.png")
 
         );
-        jumpLeftAnimation = new Animation(5,
+        jumpLeftAnimation = new Animation(4,
                 SpriteUtils.loadImage("assets/images/Player/player_left/player_jump_left_1.png"),
                 SpriteUtils.loadImage("assets/images/Player/player_left/player_jump_left_2.png"),
                 SpriteUtils.loadImage("assets/images/Player/player_left/player_jump_left_3.png"),
@@ -83,17 +82,29 @@ public class PlayerAnimator implements Renderer {
         Vector2D velocity = player.velocity;
 
         //Based on velocity, change animation
-        if (velocity.y < 0 && player.facingRight) {
+        int currentAnimIndex = 0;
+        if (velocity.y < 0 && player.facingLeft) {
+
+            if (currentAnimation == jumpRightAnimation) {
+                currentAnimIndex = currentAnimation.currentImageIndex;
+            }
+            currentAnimation.currentImageIndex = currentAnimIndex;
             currentAnimation = jumpLeftAnimation;
-        } else if (velocity.y < 0 && !player.facingRight) {
+        } else if (velocity.y < 0 && !player.facingLeft) {
+            //int currentAnimIndex = 0;
+            if (currentAnimation == jumpLeftAnimation) {
+                currentAnimIndex = currentAnimation.currentImageIndex;
+            }
+            currentAnimation.currentImageIndex = currentAnimIndex;
             currentAnimation = jumpRightAnimation;
+
         } else if (velocity.x < 0 && velocity.y == 0) {
             currentAnimation = leftAnimation;
 
         } else if (velocity.x > 0 && velocity.y == 0) {
             currentAnimation = rightAnimation;
         } else {
-            if (!player.facingRight) {
+            if (!player.facingLeft) {
                 currentAnimation = straightAnimationRight;
             } else {
                 currentAnimation = straightAnimationLeft;

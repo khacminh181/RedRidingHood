@@ -1,5 +1,6 @@
 package Entity.Boss;
 
+import Entity.Scenes.BossScene;
 import bases.Vector2D;
 import bases.renderers.Animation;
 import bases.renderers.Renderer;
@@ -7,21 +8,30 @@ import tklibs.SpriteUtils;
 
 import java.awt.*;
 
+
 public class BossAnimator implements Renderer {
 
     Animation currentAnimation;
     Animation straightAnimation;
     Animation shootAnimation;
-
-
+    Animation callAnimation;
+    WolfSpawner wolfSpawner;
     public BossAnimator() {
-        straightAnimation = new Animation(10,
-                SpriteUtils.loadImage("assets/images/Enemies/boss/boss.png")
+        wolfSpawner = new WolfSpawner();
+        straightAnimation = new Animation(20,
+                SpriteUtils.loadImage("assets/images/Enemies/boss/boss_idle_0.png"),
+                SpriteUtils.loadImage("assets/images/Enemies/boss/boss_idle_1.png")
         );
 
         shootAnimation = new Animation(10,
-                SpriteUtils.loadImage("assets/images/Enemies/boss/BossShoot.png")
+                SpriteUtils.loadImage("assets/images/Enemies/boss/boss_shoot_0.png")
         );
+        callAnimation = new Animation(5,
+                 SpriteUtils.loadImage("assets/images/Enemies/boss/boss_call_1.png"),
+                SpriteUtils.loadImage("assets/images/Enemies/boss/boss_call_2.png"),
+                SpriteUtils.loadImage("assets/images/Enemies/boss/boss_call_3.png"),
+                SpriteUtils.loadImage("assets/images/Enemies/boss/boss_call_4.png"),
+                SpriteUtils.loadImage("assets/images/Enemies/boss/boss_call_5.png"));
         currentAnimation = straightAnimation;
     }
 
@@ -34,9 +44,14 @@ public class BossAnimator implements Renderer {
         if (owner.isShooting) {
             currentAnimation = shootAnimation;
         }
+        else if (wolfSpawner.isWolf) {
+            currentAnimation = callAnimation;
+            wolfSpawner.isWolf = false;
+        }
         else {
             currentAnimation = straightAnimation;
         }
+
 
     }
 }

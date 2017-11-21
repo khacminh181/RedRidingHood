@@ -45,7 +45,7 @@ public class PlayerShoot {
             PlayerBullet newBullet = GameObject.recycle(PlayerBullet.class);
             newBullet.position.set(owner.position);
             newBullet.bulletHeight = count;
-            newBullet.facingRight = owner.facingRight;
+            newBullet.facingRight = owner.facingLeft;
 
             InputManager.xPressed = false;
 

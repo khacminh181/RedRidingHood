@@ -23,31 +23,34 @@ public class Boss extends GameObject implements PhysicsBody {
 
     Clip clip;
 
-    Random rdm = new Random();
+    Random r = new Random();
 
     BossAnimator bossAnimator;
     public boolean isShooting;
-
+    int x;
 
     public Boss() {
         super();
         bossAnimator = new BossAnimator();
         this.renderer = bossAnimator;
-        this.boxCollider = new BoxCollider(224, 448);
+        this.boxCollider = new BoxCollider(244, 302);
         this.children.add(boxCollider);
         playerDamage = new PlayerDamage();
 
         Action waitAction = new ActionWait(200);
-        Action waitAction1 = new ActionWait(50);
+        Action waitAction1 = new ActionWait(20);
 
         Action shootAction = new Action() {
             @Override
             public boolean run(GameObject owner) {
+                x = r.nextInt(5);
                 isShooting = true;
                 BossBigBullet newBossBullet = GameObject.recycle(BossBigBullet.class);
                 newBossBullet.position.set(owner.position.x , owner.position.y);
-                newBossBullet.velocity.set(-3 ,0);
+                newBossBullet.velocity.set(-4 ,0);
                 newBossBullet.configActions();
+                clip = AudioUtils.loadSound("assets/SFX/boss-shoot.wav");
+                AudioUtils.play(clip);
                 return true;
             }
 

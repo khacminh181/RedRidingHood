@@ -13,6 +13,7 @@ import bases.ParticleEffect;
 import bases.inputs.InputManager;
 import bases.scenes.Scene;
 import bases.scenes.SceneManager;
+import javafx.util.Duration;
 import tklibs.AudioUtils;
 import tklibs.Utils;
 
@@ -33,6 +34,12 @@ public class GamePlayScene implements Scene {
     public void init() {
         AudioUtils.initialize();
         SceneManager.mediaPlayer = AudioUtils.playMedia("assets/Musics/Bats In The Belfry.mp3");
+        SceneManager.mediaPlayer.setOnEndOfMedia(new Runnable() {
+            public void run() {
+                SceneManager.mediaPlayer.seek(Duration.ZERO);
+            }
+        });
+        SceneManager.mediaPlayer.play();
         addBackGround();
         addPlatform();
         addPlayer();
@@ -164,7 +171,7 @@ public class GamePlayScene implements Scene {
         viewPort.follow(player);
         background.getVelocity().set(player.getVelocity());
         heart.hP = player.HP;
-        if (InputManager.instance.spacePressed) {
+        if (InputManager.instance.cheatPressed) {
             SceneManager.changeScene(new BossScene());
         }
         if (player.checkDoor) {

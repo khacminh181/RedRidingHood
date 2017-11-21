@@ -9,10 +9,13 @@ import bases.Vector2D;
 import bases.action.Action;
 import bases.physics.BoxCollider;
 import bases.physics.PhysicsBody;
+import bases.renderers.Animation;
 import bases.renderers.ImageRenderer;
+import tklibs.AudioUtils;
 import tklibs.SpriteUtils;
 import tklibs.Utils;
 
+import javax.sound.sampled.Clip;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
@@ -22,7 +25,11 @@ public class Ghost extends GameObject implements PhysicsBody{
 
     public Ghost() {
         boxCollider = new BoxCollider(30, 30);
-        this.renderer = new ImageRenderer("assets/images/Enemies/wolf.png");
+        this.renderer = new Animation(4,
+                SpriteUtils.loadImage("assets/images/Enemies/boss/wisp_1.png"),
+                SpriteUtils.loadImage("assets/images/Enemies/boss/wisp_2.png"),
+                SpriteUtils.loadImage("assets/images/Enemies/boss/wisp_3.png")
+        );
         this.playerDamage = new PlayerDamage();
         this.children.add(this.boxCollider);
 
@@ -39,7 +46,7 @@ public class Ghost extends GameObject implements PhysicsBody{
     @Override
     public void run(Vector2D parentPosition) {
         super.run(parentPosition);
-        position.addUp(0, 2);
+        position.addUp(0, 5);
         this.playerDamage.run(this);
         deactiveIfNeeded();
     }
@@ -51,6 +58,8 @@ public class Ghost extends GameObject implements PhysicsBody{
     }
 
     public void getHit() {
+        Clip clip = AudioUtils.loadSound("assets/SFX/Cute_ghost_sound.wav");
+        AudioUtils.play(clip);
         isActive = false;
         for (int i = 0; i < 5; i++) {
             addParticle();

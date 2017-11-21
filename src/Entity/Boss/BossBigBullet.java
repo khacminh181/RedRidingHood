@@ -8,7 +8,10 @@ import bases.action.*;
 import bases.physics.BoxCollider;
 import bases.physics.Physics;
 import bases.renderers.Animation;
+import tklibs.AudioUtils;
 import tklibs.SpriteUtils;
+
+import javax.sound.sampled.Clip;
 
 public class BossBigBullet extends GameObject {
     BoxCollider boxCollider;
@@ -17,7 +20,8 @@ public class BossBigBullet extends GameObject {
     public BossBigBullet() {
         super();
         this.renderer = new Animation(1,
-                SpriteUtils.loadImage("assets/images/Enemies/boss/BossbigBullet.png")
+                SpriteUtils.loadImage("assets/images/Enemies/flowerwolf/bossbullet.png"),
+                SpriteUtils.loadImage("assets/images/Enemies/flowerwolf/bossbullet2.png")
 
         );
         this.boxCollider = new BoxCollider(32, 32);
@@ -34,7 +38,7 @@ public class BossBigBullet extends GameObject {
                 for (float angle = 360; angle >= 0; angle-= 45) {
                     BossBullet newBossBullet = GameObject.recycle(BossBullet.class);
                     newBossBullet.position.set(owner.position.x, owner.position.y);
-                    Vector2D velocity1 = Vector2D.DOWN.rotate(angle).multiply(5);
+                    Vector2D velocity1 = Vector2D.DOWN.rotate(angle).multiply(10);
                     newBossBullet.velocity.set(velocity1);
                 }
                 return true;
@@ -50,7 +54,10 @@ public class BossBigBullet extends GameObject {
             @Override
             public boolean run(GameObject owner) {
                 owner.isActive = false;
+                Clip clip1 = AudioUtils.loadSound("assets/SFX/82109__gniffelbaf__balloon-burst-01.wav");
+                AudioUtils.play(clip1);
                 return true;
+
             }
 
             @Override

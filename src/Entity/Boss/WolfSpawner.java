@@ -6,6 +6,7 @@ import bases.GameObject;
 import bases.Vector2D;
 
 public class WolfSpawner extends GameObject {
+    public boolean isWolf;
     FrameCounter frameCounter = new FrameCounter(600);
     FrameCounter frameCounter2 = new FrameCounter(5000);
 
@@ -23,6 +24,7 @@ public class WolfSpawner extends GameObject {
         if (frameCounter.run() && count <= 2) {
             frameCounter.reset();
             spawn();
+            isWolf = true;
             count ++;
         }
 

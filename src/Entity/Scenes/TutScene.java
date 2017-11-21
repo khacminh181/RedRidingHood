@@ -8,13 +8,11 @@ import Entity.Player.ViewPort;
 import Tilemap.Background;
 import Tilemap.Map;
 import bases.GameObject;
-import bases.ParticleEffect;
-import bases.Vector2D;
 import bases.inputs.InputManager;
 import bases.scenes.Scene;
 import bases.scenes.SceneManager;
+import javafx.util.Duration;
 import tklibs.AudioUtils;
-import tklibs.Utils;
 
 public class TutScene implements Scene {
     Player player;
@@ -33,6 +31,12 @@ public class TutScene implements Scene {
     @Override
     public void init() {
         AudioUtils.initialize();
+        SceneManager.mediaPlayer = AudioUtils.playMedia("assets/Musics/On Tiptoe.mp3");
+        SceneManager.mediaPlayer.setOnEndOfMedia(new Runnable() {
+            public void run() {
+                SceneManager.mediaPlayer.seek(Duration.ZERO);
+            }
+        });
         SceneManager.mediaPlayer = AudioUtils.playMedia("assets/Musics/On Tiptoe.mp3");
         addBackGround();
         addPlatform();
@@ -83,8 +87,7 @@ public class TutScene implements Scene {
         background.getVelocity().set(player.getVelocity());
         heart.hP = player.HP;
 
-
-        if (InputManager.instance.spacePressed) {
+        if (InputManager.instance.cheatPressed) {
             SceneManager.changeScene(new GamePlayScene());
         }
 

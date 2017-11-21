@@ -39,7 +39,6 @@ public class BossBullet extends GameObject {
         // va cham player
         Player player = Physics.collideWith(this.boxCollider, Player.class);
         if (player != null) {
-            System.out.println("Hit player");
             player.getHit(velocity);
             this.isActive = false;
         }

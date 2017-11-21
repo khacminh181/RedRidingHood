@@ -12,7 +12,7 @@ public class InputManager {
     public static boolean xPressed; // bullet
     public boolean zPressed; // glide
     public boolean cPressed; //jump
-    public boolean spacePressed; // fireball
+    public boolean cheatPressed; // fireball
     public boolean enterPressed;
     public static boolean shootPressed;
 
@@ -46,8 +46,8 @@ public class InputManager {
             case VK_C:
                 cPressed = true;
                 break;
-            case VK_SPACE:
-                spacePressed = true;
+            case VK_0:
+                cheatPressed = true;
                 break;
             case VK_ENTER:
                 enterPressed = true;
@@ -79,8 +79,8 @@ public class InputManager {
             case VK_C:
                 cPressed = false;
                 break;
-            case VK_SPACE:
-                spacePressed = false;
+            case VK_0:
+                cheatPressed = false;
                 break;
             case VK_ENTER:
                 enterPressed = false;

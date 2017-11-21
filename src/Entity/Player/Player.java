@@ -24,7 +24,7 @@ public class Player extends GameObject implements PhysicsBody {
 
     PlayerShoot playerShoot;
 
-    boolean facingRight;
+    boolean facingLeft;
     public boolean flinching; //nhap nhay
     public boolean isJumping;
 
@@ -103,11 +103,11 @@ public class Player extends GameObject implements PhysicsBody {
 
             }
             else if (bulletVelocity.x == 0) {
-                if (!facingRight) {
+                if (!facingLeft) {
                     velocity.addUp(-30, 0);
 
                 }
-                else if (facingRight) {
+                else if (facingLeft) {
                     velocity.addUp(30, 0);
                 }
 
@@ -128,11 +128,11 @@ public class Player extends GameObject implements PhysicsBody {
 
     private void moveHorizontal() {
         if (InputManager.instance.leftPressed) {
-            facingRight = true;
+            facingLeft = true;
             velocity.x -= 5;
         }
         if (InputManager.instance.rightPressed) {
-            facingRight = false;
+            facingLeft = false;
             velocity.x += 5;
         }
     }
@@ -212,7 +212,7 @@ public class Player extends GameObject implements PhysicsBody {
         attackerVelocity.set(bulletVelocity);
         if (flinching) return;
         knockBack = true;
-        clip = AudioUtils.loadSound("assets/SFX/moaning_RRH2.wav");
+        clip = AudioUtils.loadSound("assets/SFX/Playergethit.wav");
         AudioUtils.play(clip);
         HP--;
         if (HP <= 0) {
@@ -226,7 +226,7 @@ public class Player extends GameObject implements PhysicsBody {
         attackerVelocity.set(bulletVelocity);
         if (flinching) return;
         knockBack = true;
-        clip = AudioUtils.loadSound("assets/SFX/moaning_RRH2.wav");
+        clip = AudioUtils.loadSound("assets/SFX/Playergethit.wav");
         AudioUtils.play(clip);
         HP -= 3;
         if (HP <= 0) {

@@ -73,9 +73,11 @@ public class FlowerWolf extends GameObject implements PhysicsBody {
 
     public void getHit() {
         hP--;
-        clip = AudioUtils.loadSound("assets/SFX/Flower_exclamation.wav");
+        clip = AudioUtils.loadSound("assets/SFX/Hit_Hurt4.wav");
         AudioUtils.play(clip);
         if (hP <= 0) {
+            Clip clip1 = AudioUtils.loadSound("assets/SFX/Scream_2.wav");
+            AudioUtils.play(clip1);
             isActive = false;
             for (int i = 0; i <= 7; i++) {
                 addParticle();
