@@ -6,6 +6,7 @@ import bases.Vector2D;
 import bases.physics.BoxCollider;
 import bases.physics.PhysicsBody;
 import tklibs.AudioUtils;
+import tklibs.Utils;
 
 import javax.sound.sampled.Clip;
 
@@ -47,6 +48,7 @@ public class FlowerWolf extends GameObject implements PhysicsBody {
         ParticleEffect particleEffect = new ParticleEffect();
         particleEffect.position.set(this.position);
         GameObject.add(particleEffect);
+
     }
 
     private void shoot() {
@@ -75,7 +77,7 @@ public class FlowerWolf extends GameObject implements PhysicsBody {
         AudioUtils.play(clip);
         if (hP <= 0) {
             isActive = false;
-            for (int i = 0; i < 7; i ++) {
+            for (int i = 0; i <= 7; i++) {
                 addParticle();
             }
         }

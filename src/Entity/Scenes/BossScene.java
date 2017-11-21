@@ -11,6 +11,7 @@ import Entity.Player.ViewPort;
 import Tilemap.Background;
 import Tilemap.Map;
 import bases.GameObject;
+import bases.ParticleEffect;
 import bases.Vector2D;
 import bases.action.Action;
 import bases.action.ActionRepeatForever;
@@ -18,6 +19,7 @@ import bases.inputs.InputManager;
 import bases.scenes.Scene;
 import bases.scenes.SceneManager;
 import tklibs.AudioUtils;
+import tklibs.Utils;
 
 public class BossScene implements Scene {
     Player player;
@@ -99,11 +101,14 @@ public class BossScene implements Scene {
         //viewPort.follow(player);
         //background.getVelocity().set(player.getVelocity());
         heart.hP = player.HP;
+        wolfSpawner.bossHP = boss.hP;
+        ghostSpawner.bossHP = boss.hP;
 
         System.out.println(boss.isShooting);
         if (InputManager.instance.spacePressed) {
             SceneManager.changeScene(new GameWinScene());
         }
+
         if (player.checkDoor) {
             if (InputManager.instance.upPressed) {
                 if (boss.hP <= 0) {

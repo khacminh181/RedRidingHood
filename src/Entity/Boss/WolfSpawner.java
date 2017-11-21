@@ -10,6 +10,7 @@ public class WolfSpawner extends GameObject {
     FrameCounter frameCounter2 = new FrameCounter(5000);
 
     private int count = 0;
+    public int bossHP;
 
     @Override
     public void run(Vector2D parentPosition) {
@@ -28,8 +29,10 @@ public class WolfSpawner extends GameObject {
     }
 
     private void spawn() {
-        NormalWolf normalWolf = GameObject.recycle(NormalWolf.class);
-        normalWolf.position.set(21*31, 16*32 -8 );
+        if (bossHP > 0) {
+            NormalWolf normalWolf = GameObject.recycle(NormalWolf.class);
+            normalWolf.position.set(21 * 31, 16 * 32 - 8);
+        }
 
     }
 }

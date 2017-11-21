@@ -8,10 +8,13 @@ import Entity.Player.ViewPort;
 import Tilemap.Background;
 import Tilemap.Map;
 import bases.GameObject;
+import bases.ParticleEffect;
+import bases.Vector2D;
 import bases.inputs.InputManager;
 import bases.scenes.Scene;
 import bases.scenes.SceneManager;
 import tklibs.AudioUtils;
+import tklibs.Utils;
 
 public class TutScene implements Scene {
     Player player;
@@ -79,6 +82,7 @@ public class TutScene implements Scene {
         viewPort.follow(player);
         background.getVelocity().set(player.getVelocity());
         heart.hP = player.HP;
+
 
         if (InputManager.instance.spacePressed) {
             SceneManager.changeScene(new GamePlayScene());

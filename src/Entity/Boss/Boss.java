@@ -10,6 +10,7 @@ import bases.physics.BoxCollider;
 import bases.physics.PhysicsBody;
 import bases.renderers.ImageRenderer;
 import tklibs.AudioUtils;
+import tklibs.Utils;
 
 import javax.sound.sampled.Clip;
 import java.util.Random;
@@ -79,6 +80,8 @@ public class Boss extends GameObject implements PhysicsBody {
         ParticleEffect particleEffect = new ParticleEffect();
         particleEffect.position.set(this.position);
         GameObject.add(particleEffect);
+//        ParticleEffect particleEffect = GameObject.recycle(ParticleEffect.class);
+//        particleEffect.position.set(this.position);
     }
 
     @Override
