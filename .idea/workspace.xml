@@ -1,40 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="RedRidingHood:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2ae8fffc-788a-4a44-b78d-e86dc96ba8a7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/SFX/Flower_exclamation.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/SFX/Powerup6.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/SFX/Powerup8.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/SFX/moaning_RRH2.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/SFX/throwaxe.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/SFX/throwaxe.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/Enemies/boss/boss.png" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/RedRidingHood_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/Enemies/flowerwolf/flowerwolf_right_2.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/images/Enemies/flowerwolf/flowerwolf_right_0.png" afterPath="$PROJECT_DIR$/assets/images/Enemies/flowerwolf/flowerwolf_right_0.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/images/Enemies/flowerwolf/flowerwolf_right_1.png" afterPath="$PROJECT_DIR$/assets/images/Enemies/flowerwolf/flowerwolf_right_1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/images/Map1/GameOverScene.png" afterPath="$PROJECT_DIR$/assets/images/Map1/GameOverScene.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/images/Map1/GameWinScene.png" afterPath="$PROJECT_DIR$/assets/images/Map1/GameWinScene.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/images/Map1/door.png" afterPath="$PROJECT_DIR$/assets/images/Map1/door.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RedRidingHood.iml" afterPath="$PROJECT_DIR$/RedRidingHood.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Boss/Boss.java" afterPath="$PROJECT_DIR$/src/Entity/Boss/Boss.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Boss/BossAnimator.java" afterPath="$PROJECT_DIR$/src/Entity/Boss/BossAnimator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Boss/BossBigBullet.java" afterPath="$PROJECT_DIR$/src/Entity/Boss/BossBigBullet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Boss/BossBullet.java" afterPath="$PROJECT_DIR$/src/Entity/Boss/BossBullet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Boss/Ghost.java" afterPath="$PROJECT_DIR$/src/Entity/Boss/Ghost.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Boss/WolfSpawner.java" afterPath="$PROJECT_DIR$/src/Entity/Boss/WolfSpawner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Enemy/FlowerWolf.java" afterPath="$PROJECT_DIR$/src/Entity/Enemy/FlowerWolf.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Enemy/FlowerWolfAnimator.java" afterPath="$PROJECT_DIR$/src/Entity/Enemy/FlowerWolfAnimator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Player/Player.java" afterPath="$PROJECT_DIR$/src/Entity/Player/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Player/PlayerAnimator.java" afterPath="$PROJECT_DIR$/src/Entity/Player/PlayerAnimator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Player/PlayerShoot.java" afterPath="$PROJECT_DIR$/src/Entity/Player/PlayerShoot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Scenes/BossScene.java" afterPath="$PROJECT_DIR$/src/Entity/Scenes/BossScene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Scenes/GameOverScene.java" afterPath="$PROJECT_DIR$/src/Entity/Scenes/GameOverScene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Scenes/GamePlayScene.java" afterPath="$PROJECT_DIR$/src/Entity/Scenes/GamePlayScene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Scenes/TutScene.java" afterPath="$PROJECT_DIR$/src/Entity/Scenes/TutScene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bases/inputs/InputManager.java" afterPath="$PROJECT_DIR$/src/bases/inputs/InputManager.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/src/Entity/Boss/Boss.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-463">
-              <caret line="54" column="13" lean-forward="true" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+              <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1511288945465" expanded="false" signature="2562:2573" ph=" { " />
@@ -72,11 +51,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ghost.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Ghost.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Boss/Ghost.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
               <caret line="61" column="28" lean-forward="false" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlowerWolfAnimator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Enemy/FlowerWolfAnimator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="17" column="96" lean-forward="false" selection-start-line="17" selection-start-column="96" selection-end-line="17" selection-end-column="96" />
               <folding />
             </state>
           </provider>
@@ -98,12 +87,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InputManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bases/inputs/InputManager.java">
+      <file leaf-file-name="FlowerWolf.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Enemy/FlowerWolf.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-              <folding />
+            <state relative-caret-position="64">
+              <caret line="64" column="70" lean-forward="false" selection-start-line="64" selection-start-column="70" selection-end-line="64" selection-end-column="70" />
+              <folding>
+                <marker date="1511288945383" expanded="true" signature="2319:2385" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,20 +128,6 @@
                 <marker date="1511288945317" expanded="true" signature="4577:4749" ph="//..." />
                 <marker date="1511288945317" expanded="true" signature="5293:5535" ph="{...}" />
                 <marker date="1511288945317" expanded="true" signature="5560:5971" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TutScene.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Scenes/TutScene.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="89" column="46" lean-forward="false" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="46" />
-              <folding>
-                <marker date="1511288951979" expanded="true" signature="2381:2627" ph="{...}" />
-                <marker date="1511288951979" expanded="false" signature="2676:2687" ph=" { " />
-                <marker date="1511288951979" expanded="false" signature="2708:2714" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -208,7 +185,6 @@
         <option value="$PROJECT_DIR$/src/Entity/Player/PlayerBullet.java" />
         <option value="$PROJECT_DIR$/src/Entity/Boss/GhostSpawner.java" />
         <option value="$PROJECT_DIR$/src/Entity/Player/PlayerShoot.java" />
-        <option value="$PROJECT_DIR$/src/Entity/Enemy/FlowerWolfAnimator.java" />
         <option value="$PROJECT_DIR$/src/Entity/Boss/BossBullet.java" />
         <option value="$PROJECT_DIR$/src/Entity/Boss/WolfSpawner.java" />
         <option value="$PROJECT_DIR$/src/Entity/Player/Player.java" />
@@ -224,6 +200,7 @@
         <option value="$PROJECT_DIR$/src/Entity/Scenes/TutScene.java" />
         <option value="$PROJECT_DIR$/src/Entity/Boss/Boss.java" />
         <option value="$PROJECT_DIR$/src/Entity/Boss/Ghost.java" />
+        <option value="$PROJECT_DIR$/src/Entity/Enemy/FlowerWolfAnimator.java" />
       </list>
     </option>
   </component>
@@ -313,6 +290,17 @@
               <item name="RedRidingHood" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="SFX" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RedRidingHood" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RedRidingHood" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RedRidingHood" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RedRidingHood" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RedRidingHood" type="b2602c69:ProjectViewProjectNode" />
@@ -430,8 +418,13 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lfkae\Documents\RedRidingHood\out\artifacts\RedRidingHood_jar" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -612,7 +605,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511288767348</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Final PJ">
+      <created>1511289242598</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1511289242598</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -693,14 +693,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Tilemap/Map.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -903,16 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Enemy/FlowerWolf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="83" column="5" lean-forward="false" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
-          <folding>
-            <marker date="1511288945383" expanded="true" signature="2319:2385" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/util/Duration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
@@ -942,14 +924,6 @@
     <entry file="file://$PROJECT_DIR$/assets/images/Enemies/boss/boss_call_1.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Enemy/FlowerWolfAnimator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/GameWindow.java">
@@ -1052,7 +1026,7 @@
     <entry file="file://$PROJECT_DIR$/src/Entity/Boss/Boss.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-463">
-          <caret line="54" column="13" lean-forward="true" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+          <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1511288945465" expanded="false" signature="2562:2573" ph=" { " />
@@ -1093,16 +1067,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/RedRidingHood_jar/assets/Map/up.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Enemy/FlowerWolf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="64" column="70" lean-forward="false" selection-start-line="64" selection-start-column="70" selection-end-line="64" selection-end-column="70" />
+          <folding>
+            <marker date="1511288945383" expanded="true" signature="2319:2385" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Enemy/FlowerWolfAnimator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="96" lean-forward="false" selection-start-line="17" selection-start-column="96" selection-end-line="17" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>RedRidingHood:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

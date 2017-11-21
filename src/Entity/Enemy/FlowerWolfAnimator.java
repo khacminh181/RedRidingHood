@@ -15,8 +15,7 @@ public class FlowerWolfAnimator implements Renderer {
     public FlowerWolfAnimator() {
         rightAnimation = new Animation(10,
                 SpriteUtils.loadImage("assets/images/Enemies/flowerwolf/flowerwolf_right_0.png"),
-                SpriteUtils.loadImage("assets/images/Enemies/flowerwolf/flowerwolf_right_1.png"),
-                SpriteUtils.loadImage("assets/images/Enemies/flowerwolf/flowerwolf_right_2.png")
+                SpriteUtils.loadImage("assets/images/Enemies/flowerwolf/flowerwolf_right_1.png")
         );
 
         leftAnimation = new Animation(10,
